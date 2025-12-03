@@ -7,6 +7,7 @@ type BottomSheetContextType = {
     unmount(): void;
 } | null;
 export interface BottomSheetProviderProps extends PropsWithChildren {
+    Provider?: ((props: PropsWithChildren) => React.JSX.Element) | React.ExoticComponent;
     DefaultBottomSheet: DefaultBottomSheetComponent;
 }
 export declare const BottomSheetContext: import("react").Context<BottomSheetContextType>;
@@ -15,6 +16,6 @@ export declare const useBottomSheet: () => {
     mount(el: ReactNode): void;
     unmount(): void;
 };
-export declare function BottomSheetProvider({ children, DefaultBottomSheet, }: BottomSheetProviderProps): import("react/jsx-runtime").JSX.Element;
+export declare function BottomSheetProvider({ children, Provider, DefaultBottomSheet, }: BottomSheetProviderProps): import("react/jsx-runtime").JSX.Element;
 export {};
 //# sourceMappingURL=BottomSheetProvider.d.ts.map

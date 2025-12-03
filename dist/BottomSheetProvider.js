@@ -14,8 +14,8 @@ var useBottomSheet = function () {
 };
 exports.useBottomSheet = useBottomSheet;
 function BottomSheetProvider(_a) {
-    var children = _a.children, DefaultBottomSheet = _a.DefaultBottomSheet;
-    var _b = (0, react_1.useState)(null), element = _b[0], setElement = _b[1];
+    var children = _a.children, _b = _a.Provider, Provider = _b === void 0 ? react_1.Fragment : _b, DefaultBottomSheet = _a.DefaultBottomSheet;
+    var _c = (0, react_1.useState)(null), element = _c[0], setElement = _c[1];
     var elementRef = (0, react_1.useRef)(element);
     var pendingMountRef = (0, react_1.useRef)(null);
     var pendingResolvedRef = (0, react_1.useRef)(false);
@@ -55,6 +55,6 @@ function BottomSheetProvider(_a) {
         }
     }, [syncSetElement]);
     var context = (0, react_1.useMemo)(function () { return ({ mount: mount, unmount: unmount, DefaultBottomSheet: DefaultBottomSheet }); }, [mount, unmount, DefaultBottomSheet]);
-    return ((0, jsx_runtime_1.jsxs)(exports.BottomSheetContext.Provider, { value: context, children: [children, element] }));
+    return ((0, jsx_runtime_1.jsx)(exports.BottomSheetContext.Provider, { value: context, children: (0, jsx_runtime_1.jsxs)(Provider, { children: [children, element] }) }));
 }
 //# sourceMappingURL=BottomSheetProvider.js.map
