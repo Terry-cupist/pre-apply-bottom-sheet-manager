@@ -24,9 +24,10 @@ type BottomSheetHookReturnType = {
    * @param options - ModalComponent에 전달할 추가 props
    */
   open: (
-    ModalComponent: DefaultBottomSheetComponent,
     component: JSX.Element,
-    options?: BottomSheetOpenOptions<BottomSheetModalProps>,
+    options?: BottomSheetOpenOptions<BottomSheetModalProps> & {
+      ModalComponent?: DefaultBottomSheetComponent;
+    },
   ) => void;
   /**
    * 현재 열려있는 bottom sheet를 닫습니다
@@ -43,12 +44,12 @@ export function useBottomSheet(): BottomSheetHookReturnType {
 
   return useMemo(
     () => ({
-      open: (ModalComponent, component, options = {}) => {
+      open: (component, options = {}) => {
         mount(
           <BottomSheetController
             key={Date.now()}
             ref={controllerRef}
-            ModalComponent={ModalComponent ?? DefaultBottomSheet}
+            ModalComponent={options.ModalComponent ?? DefaultBottomSheet}
             modalProps={options.modalProps}
             onDismiss={unmount}
           >
