@@ -7,7 +7,7 @@ var react_1 = require("react");
 exports.BottomSheetContext = (0, react_1.createContext)(null);
 var useBottomSheet = function () {
     var context = (0, react_1.useContext)(exports.BottomSheetContext);
-    if (context == null) {
+    if (context === null) {
         throw new Error("useBottomSheet is only available within BottomSheetProvider.");
     }
     return context;

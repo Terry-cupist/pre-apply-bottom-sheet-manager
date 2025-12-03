@@ -19,6 +19,6 @@ function useBottomSheet() {
             var _a;
             (_a = controllerRef.current) === null || _a === void 0 ? void 0 : _a.close();
         },
-    }); }, [mount, unmount, DefaultBottomSheet]);
+    }); }, [mount, unmount]);
 }
 //# sourceMappingURL=useBottomSheet.js.map
