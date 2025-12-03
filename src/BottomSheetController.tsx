@@ -1,5 +1,4 @@
 import {
-  ComponentType,
   forwardRef,
   PropsWithChildren,
   Ref,
@@ -39,7 +38,9 @@ interface Props<P extends BottomSheetModalProps = BottomSheetModalProps> {
    * - open, close 메서드를 가진 ref 필수
    * - onDismiss prop 필수
    */
-  ModalComponent: ComponentType<P & { ref?: Ref<BottomSheetModalRef> }>;
+  ModalComponent: React.ForwardRefExoticComponent<
+    P & React.RefAttributes<BottomSheetModalRef>
+  >;
   /**
    * ModalComponent에 전달할 추가 props
    */
