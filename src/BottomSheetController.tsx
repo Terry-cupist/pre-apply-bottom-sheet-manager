@@ -1,4 +1,5 @@
 import {
+  ComponentType,
   forwardRef,
   PropsWithChildren,
   Ref,
@@ -7,7 +8,6 @@ import {
   useImperativeHandle,
   useRef,
   useState,
-  ComponentType,
 } from "react";
 
 /**
@@ -21,7 +21,7 @@ export interface BottomSheetModalRef {
 /**
  * Bottom sheet 컴포넌트가 받아야 하는 props 인터페이스
  */
-export interface BottomSheetModalProps {
+export interface BottomSheetModalProps extends PropsWithChildren {
   onDismiss: () => void;
   [key: string]: any;
 }
