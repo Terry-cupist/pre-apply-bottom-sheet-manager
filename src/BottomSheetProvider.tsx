@@ -3,6 +3,7 @@ import {
   PropsWithChildren,
   ReactNode,
   useCallback,
+  useContext,
   useMemo,
   useRef,
   useState,
@@ -32,6 +33,15 @@ export interface BottomSheetProviderProps extends PropsWithChildren {
 }
 
 export const BottomSheetContext = createContext<BottomSheetContextType>(null);
+export const useBottomSheet = () => {
+  const context = useContext(BottomSheetContext);
+  if (context == null) {
+    throw new Error(
+      "useBottomSheet is only available within BottomSheetProvider.",
+    );
+  }
+  return context;
+};
 
 export function BottomSheetProvider({
   children,

@@ -1,12 +1,12 @@
-import { useContext, useMemo, useRef } from "react";
+import { useMemo, useRef } from "react";
 import {
   BottomSheetControlRef,
   BottomSheetController,
   BottomSheetModalProps,
 } from "./BottomSheetController";
 import {
-  BottomSheetContext,
   DefaultBottomSheetComponent,
+  useBottomSheet as useBottomSheetContext,
 } from "./BottomSheetProvider";
 
 type BottomSheetOpenOptions<P extends BottomSheetModalProps> = {
@@ -35,13 +35,7 @@ type BottomSheetHookReturnType = {
 };
 
 export function useBottomSheet(): BottomSheetHookReturnType {
-  const context = useContext(BottomSheetContext);
-
-  if (context == null) {
-    throw new Error(
-      "useBottomSheet is only available within BottomSheetProvider.",
-    );
-  }
+  const context = useBottomSheetContext();
 
   const { mount, unmount, DefaultBottomSheet } = context;
 
