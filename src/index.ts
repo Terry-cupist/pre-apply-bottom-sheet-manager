@@ -15,5 +15,6 @@ export {
   BottomSheetContext,
   BottomSheetProvider,
   BottomSheetProviderProps,
+  DefaultBottomSheetComponent,
 } from "./BottomSheetProvider";
 export { useBottomSheet } from "./useBottomSheet";

@@ -1,10 +1,18 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.BottomSheetContext = void 0;
+exports.useBottomSheet = exports.BottomSheetContext = void 0;
 exports.BottomSheetProvider = BottomSheetProvider;
 var jsx_runtime_1 = require("react/jsx-runtime");
 var react_1 = require("react");
 exports.BottomSheetContext = (0, react_1.createContext)(null);
+var useBottomSheet = function () {
+    var context = (0, react_1.useContext)(exports.BottomSheetContext);
+    if (context == null) {
+        throw new Error("useBottomSheet is only available within BottomSheetProvider.");
+    }
+    return context;
+};
+exports.useBottomSheet = useBottomSheet;
 function BottomSheetProvider(_a) {
     var children = _a.children, DefaultBottomSheet = _a.DefaultBottomSheet;
     var _b = (0, react_1.useState)(null), element = _b[0], setElement = _b[1];

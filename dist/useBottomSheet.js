@@ -6,10 +6,7 @@ var react_1 = require("react");
 var BottomSheetController_1 = require("./BottomSheetController");
 var BottomSheetProvider_1 = require("./BottomSheetProvider");
 function useBottomSheet() {
-    var context = (0, react_1.useContext)(BottomSheetProvider_1.BottomSheetContext);
-    if (context == null) {
-        throw new Error("useBottomSheet is only available within BottomSheetProvider.");
-    }
+    var context = (0, BottomSheetProvider_1.useBottomSheet)();
     var mount = context.mount, unmount = context.unmount, DefaultBottomSheet = context.DefaultBottomSheet;
     var controllerRef = (0, react_1.useRef)(null);
     return (0, react_1.useMemo)(function () { return ({

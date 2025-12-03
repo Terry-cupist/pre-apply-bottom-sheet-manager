@@ -1,18 +1,20 @@
-import { ComponentType, PropsWithChildren, ReactNode, Ref } from "react";
-import { BottomSheetModalRef } from "./BottomSheetController";
+import { PropsWithChildren, ReactNode } from "react";
+import { BottomSheetModalProps, BottomSheetModalRef } from "./BottomSheetController";
+export type DefaultBottomSheetComponent = React.ForwardRefExoticComponent<BottomSheetModalProps & React.RefAttributes<BottomSheetModalRef>>;
 type BottomSheetContextType = {
-    DefaultBottomSheet: ComponentType<{
-        ref?: Ref<BottomSheetModalRef>;
-    }>;
+    DefaultBottomSheet: DefaultBottomSheetComponent;
     mount(el: ReactNode): void;
     unmount(): void;
 } | null;
-interface BottomSheetProviderProps extends PropsWithChildren {
-    DefaultBottomSheet: ComponentType<{
-        ref?: Ref<BottomSheetModalRef>;
-    }>;
+export interface BottomSheetProviderProps extends PropsWithChildren {
+    DefaultBottomSheet: DefaultBottomSheetComponent;
 }
 export declare const BottomSheetContext: import("react").Context<BottomSheetContextType>;
+export declare const useBottomSheet: () => {
+    DefaultBottomSheet: DefaultBottomSheetComponent;
+    mount(el: ReactNode): void;
+    unmount(): void;
+};
 export declare function BottomSheetProvider({ children, DefaultBottomSheet, }: BottomSheetProviderProps): import("react/jsx-runtime").JSX.Element;
 export {};
 //# sourceMappingURL=BottomSheetProvider.d.ts.map
