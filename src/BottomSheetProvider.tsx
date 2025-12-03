@@ -1,5 +1,6 @@
 import {
   createContext,
+  Fragment,
   PropsWithChildren,
   ReactNode,
   useCallback,
@@ -29,6 +30,9 @@ interface PendingMount {
 }
 
 export interface BottomSheetProviderProps extends PropsWithChildren {
+  Provider?:
+    | ((props: PropsWithChildren) => React.JSX.Element)
+    | React.ExoticComponent;
   DefaultBottomSheet: DefaultBottomSheetComponent;
 }
 
@@ -46,6 +50,7 @@ export const useBottomSheet = () => {
 
 export function BottomSheetProvider({
   children,
+  Provider = Fragment,
   DefaultBottomSheet,
 }: BottomSheetProviderProps) {
   const [element, setElement] = useState<ReactNode | null>(null);
@@ -101,8 +106,10 @@ export function BottomSheetProvider({
 
   return (
     <BottomSheetContext.Provider value={context}>
-      {children}
-      {element}
+      <Provider>
+        {children}
+        {element}
+      </Provider>
     </BottomSheetContext.Provider>
   );
 }
