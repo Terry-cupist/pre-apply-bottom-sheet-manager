@@ -35,7 +35,8 @@ export interface BottomSheetProviderProps extends PropsWithChildren {
 export const BottomSheetContext = createContext<BottomSheetContextType>(null);
 export const useBottomSheet = () => {
   const context = useContext(BottomSheetContext);
-  if (context == null) {
+
+  if (context === null) {
     throw new Error(
       "useBottomSheet is only available within BottomSheetProvider.",
     );

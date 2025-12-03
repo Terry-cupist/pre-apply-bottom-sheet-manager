@@ -61,6 +61,6 @@ export function useBottomSheet(): BottomSheetHookReturnType {
         controllerRef.current?.close();
       },
     }),
-    [mount, unmount, DefaultBottomSheet],
+    [mount, unmount],
   );
 }
