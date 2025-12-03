@@ -1,18 +1,23 @@
 import {
-  ComponentType,
   createContext,
   PropsWithChildren,
   ReactNode,
-  Ref,
   useCallback,
   useMemo,
   useRef,
   useState,
 } from "react";
-import { BottomSheetModalRef } from "./BottomSheetController";
+import {
+  BottomSheetModalProps,
+  BottomSheetModalRef,
+} from "./BottomSheetController";
+
+export type DefaultBottomSheetComponent = React.ForwardRefExoticComponent<
+  BottomSheetModalProps & React.RefAttributes<BottomSheetModalRef>
+>;
 
 type BottomSheetContextType = {
-  DefaultBottomSheet: ComponentType<{ ref?: Ref<BottomSheetModalRef> }>;
+  DefaultBottomSheet: DefaultBottomSheetComponent;
   mount(el: ReactNode): void;
   unmount(): void;
 } | null;
@@ -22,8 +27,8 @@ interface PendingMount {
   resolve: () => void;
 }
 
-interface BottomSheetProviderProps extends PropsWithChildren {
-  DefaultBottomSheet: ComponentType<{ ref?: Ref<BottomSheetModalRef> }>;
+export interface BottomSheetProviderProps extends PropsWithChildren {
+  DefaultBottomSheet: DefaultBottomSheetComponent;
 }
 
 export const BottomSheetContext = createContext<BottomSheetContextType>(null);

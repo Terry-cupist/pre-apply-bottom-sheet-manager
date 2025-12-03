@@ -32,19 +32,19 @@ export interface BottomSheetControlRef {
   close: () => void;
 }
 
-interface Props<P extends BottomSheetModalProps = BottomSheetModalProps> {
+interface Props {
   /**
    * Bottom sheet UI 컴포넌트
    * - open, close 메서드를 가진 ref 필수
    * - onDismiss prop 필수
    */
   ModalComponent: React.ForwardRefExoticComponent<
-    P & React.RefAttributes<BottomSheetModalRef>
+    BottomSheetModalProps & React.RefAttributes<BottomSheetModalRef>
   >;
   /**
    * ModalComponent에 전달할 추가 props
    */
-  modalProps?: Omit<P, "onDismiss">;
+  modalProps?: Omit<BottomSheetModalProps, "onDismiss">;
   /**
    * Bottom sheet가 닫힐 때 호출되는 콜백
    */
@@ -52,13 +52,13 @@ interface Props<P extends BottomSheetModalProps = BottomSheetModalProps> {
 }
 
 export const BottomSheetController = forwardRef(
-  <P extends BottomSheetModalProps = BottomSheetModalProps>(
+  (
     {
       children,
       ModalComponent,
       modalProps,
       onDismiss,
-    }: PropsWithChildren<Props<P>>,
+    }: PropsWithChildren<Props>,
     ref: Ref<BottomSheetControlRef>,
   ) => {
     const bottomSheetRef = useRef<BottomSheetModalRef>(null);
@@ -88,13 +88,11 @@ export const BottomSheetController = forwardRef(
     return (
       <ModalComponent
         ref={bottomSheetRef}
-        {...(modalProps as P)}
+        {...(modalProps as BottomSheetModalProps)}
         onDismiss={onDismiss}
       >
         {children}
       </ModalComponent>
     );
   },
-) as <P extends BottomSheetModalProps = BottomSheetModalProps>(
-  props: PropsWithChildren<Props<P>> & { ref?: Ref<BottomSheetControlRef> },
-) => JSX.Element;
+);

@@ -1,11 +1,13 @@
-import { ComponentType, useContext, useMemo, useRef } from "react";
+import { useContext, useMemo, useRef } from "react";
 import {
   BottomSheetControlRef,
   BottomSheetController,
   BottomSheetModalProps,
-  BottomSheetModalRef,
 } from "./BottomSheetController";
-import { BottomSheetContext } from "./BottomSheetProvider";
+import {
+  BottomSheetContext,
+  DefaultBottomSheetComponent,
+} from "./BottomSheetProvider";
 
 type BottomSheetOpenOptions<P extends BottomSheetModalProps> = {
   /**
@@ -14,7 +16,7 @@ type BottomSheetOpenOptions<P extends BottomSheetModalProps> = {
   modalProps?: Omit<P, "onDismiss">;
 };
 
-type BottomSheetHookReturnType<P extends BottomSheetModalProps> = {
+type BottomSheetHookReturnType = {
   /**
    * Bottom sheet를 열고 컨텐츠를 표시합니다
    * @param ModalComponent - open, close 메서드를 가진 ref와 onDismiss prop을 가지는 컴포넌트
@@ -22,9 +24,9 @@ type BottomSheetHookReturnType<P extends BottomSheetModalProps> = {
    * @param options - ModalComponent에 전달할 추가 props
    */
   open: (
-    ModalComponent: ComponentType<P & { ref?: React.Ref<BottomSheetModalRef> }>,
+    ModalComponent: DefaultBottomSheetComponent,
     component: JSX.Element,
-    options?: BottomSheetOpenOptions<P>,
+    options?: BottomSheetOpenOptions<BottomSheetModalProps>,
   ) => void;
   /**
    * 현재 열려있는 bottom sheet를 닫습니다
@@ -32,9 +34,7 @@ type BottomSheetHookReturnType<P extends BottomSheetModalProps> = {
   close: () => void;
 };
 
-export function useBottomSheet<
-  P extends BottomSheetModalProps = BottomSheetModalProps,
->(): BottomSheetHookReturnType<P> {
+export function useBottomSheet(): BottomSheetHookReturnType {
   const context = useContext(BottomSheetContext);
 
   if (context == null) {
@@ -51,7 +51,7 @@ export function useBottomSheet<
     () => ({
       open: (ModalComponent, component, options = {}) => {
         mount(
-          <BottomSheetController<P>
+          <BottomSheetController
             key={Date.now()}
             ref={controllerRef}
             ModalComponent={ModalComponent ?? DefaultBottomSheet}
