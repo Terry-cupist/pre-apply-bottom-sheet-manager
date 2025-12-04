@@ -18,4 +18,4 @@ export {
   BottomSheetProviderProps,
   DefaultBottomSheetComponent,
 } from "./BottomSheetProvider";
-export { useBottomSheet } from "./useBottomSheet";
+export { useCupistBottomSheet } from "./useBottomSheet";

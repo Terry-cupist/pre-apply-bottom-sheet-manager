@@ -21,6 +21,6 @@ type BottomSheetHookReturnType = {
      */
     close: () => void;
 };
-export declare function useBottomSheet(): BottomSheetHookReturnType;
+export declare function useCupistBottomSheet(): BottomSheetHookReturnType;
 export {};
 //# sourceMappingURL=useBottomSheet.d.ts.map

@@ -7,5 +7,5 @@
 export * from "./bottomSheet";
 export { BottomSheetController, type BottomSheetControlRef, type BottomSheetModalProps, type BottomSheetModalRef, } from "./BottomSheetController";
 export { BottomSheetContext, BottomSheetProvider, BottomSheetProviderProps, DefaultBottomSheetComponent, } from "./BottomSheetProvider";
-export { useBottomSheet } from "./useBottomSheet";
+export { useCupistBottomSheet } from "./useBottomSheet";
 //# sourceMappingURL=index.d.ts.map

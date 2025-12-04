@@ -35,7 +35,7 @@ type BottomSheetHookReturnType = {
   close: () => void;
 };
 
-export function useBottomSheet(): BottomSheetHookReturnType {
+export function useCupistBottomSheet(): BottomSheetHookReturnType {
   const context = useBottomSheetContext();
 
   const { mount, unmount, DefaultBottomSheet } = context;

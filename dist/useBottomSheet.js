@@ -1,11 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.useBottomSheet = useBottomSheet;
+exports.useCupistBottomSheet = useCupistBottomSheet;
 var jsx_runtime_1 = require("react/jsx-runtime");
 var react_1 = require("react");
 var BottomSheetController_1 = require("./BottomSheetController");
 var BottomSheetProvider_1 = require("./BottomSheetProvider");
-function useBottomSheet() {
+function useCupistBottomSheet() {
     var context = (0, BottomSheetProvider_1.useBottomSheet)();
     var mount = context.mount, unmount = context.unmount, DefaultBottomSheet = context.DefaultBottomSheet;
     var controllerRef = (0, react_1.useRef)(null);
