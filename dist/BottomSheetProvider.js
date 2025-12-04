@@ -1,20 +1,20 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.useBottomSheet = exports.BottomSheetContext = void 0;
-exports.BottomSheetProvider = BottomSheetProvider;
+exports.useCupistBottomSheetContext = exports.CupistBottomSheetContext = void 0;
+exports.CupistBottomSheetProvider = CupistBottomSheetProvider;
 var jsx_runtime_1 = require("react/jsx-runtime");
 var react_1 = require("react");
 var bottomSheet_1 = require("./bottomSheet");
-exports.BottomSheetContext = (0, react_1.createContext)(null);
-var useBottomSheet = function () {
-    var context = (0, react_1.useContext)(exports.BottomSheetContext);
+exports.CupistBottomSheetContext = (0, react_1.createContext)(null);
+var useCupistBottomSheetContext = function () {
+    var context = (0, react_1.useContext)(exports.CupistBottomSheetContext);
     if (context === null) {
         throw new Error("useBottomSheet is only available within BottomSheetProvider.");
     }
     return context;
 };
-exports.useBottomSheet = useBottomSheet;
-function BottomSheetProvider(_a) {
+exports.useCupistBottomSheetContext = useCupistBottomSheetContext;
+function CupistBottomSheetProvider(_a) {
     var children = _a.children, DefaultBottomSheet = _a.DefaultBottomSheet;
     var _b = (0, react_1.useState)(null), element = _b[0], setElement = _b[1];
     var elementRef = (0, react_1.useRef)(element);
@@ -56,6 +56,6 @@ function BottomSheetProvider(_a) {
         }
     }, [syncSetElement]);
     var context = (0, react_1.useMemo)(function () { return ({ mount: mount, unmount: unmount, DefaultBottomSheet: DefaultBottomSheet }); }, [mount, unmount, DefaultBottomSheet]);
-    return ((0, jsx_runtime_1.jsx)(exports.BottomSheetContext.Provider, { value: context, children: (0, jsx_runtime_1.jsxs)(bottomSheet_1.BottomSheetModalProvider, { children: [children, element] }) }));
+    return ((0, jsx_runtime_1.jsx)(exports.CupistBottomSheetContext.Provider, { value: context, children: (0, jsx_runtime_1.jsxs)(bottomSheet_1.BottomSheetModalProvider, { children: [children, element] }) }));
 }
 //# sourceMappingURL=BottomSheetProvider.js.map

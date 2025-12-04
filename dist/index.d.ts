@@ -5,7 +5,7 @@
  * This package manages bottom sheet state and lifecycle without depending on specific UI libraries.
  */
 export * from "./bottomSheet";
-export { BottomSheetController, type BottomSheetControlRef, type BottomSheetModalProps, type BottomSheetModalRef, } from "./BottomSheetController";
-export { BottomSheetContext, BottomSheetProvider, BottomSheetProviderProps, DefaultBottomSheetComponent, } from "./BottomSheetProvider";
+export { CupistBottomSheetController, type CupistBottomSheetControlRef, type CupistBottomSheetModalProps, type CupistBottomSheetModalRef, } from "./BottomSheetController";
+export { CupistBottomSheetContext, CupistBottomSheetProvider, CupistBottomSheetProviderProps, CupistDefaultBottomSheetComponent, } from "./BottomSheetProvider";
 export { useCupistBottomSheet } from "./useBottomSheet";
 //# sourceMappingURL=index.d.ts.map

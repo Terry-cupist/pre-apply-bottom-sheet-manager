@@ -11,10 +11,10 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.BottomSheetController = void 0;
+exports.CupistBottomSheetController = void 0;
 var jsx_runtime_1 = require("react/jsx-runtime");
 var react_1 = require("react");
-exports.BottomSheetController = (0, react_1.forwardRef)(function (_a, ref) {
+exports.CupistBottomSheetController = (0, react_1.forwardRef)(function (_a, ref) {
     var children = _a.children, ModalComponent = _a.ModalComponent, modalProps = _a.modalProps, onDismiss = _a.onDismiss;
     var bottomSheetRef = (0, react_1.useRef)(null);
     var _b = (0, react_1.useState)(false), isOpenBottomSheet = _b[0], setIsOpenBottomSheet = _b[1];
