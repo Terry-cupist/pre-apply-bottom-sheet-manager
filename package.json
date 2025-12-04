@@ -15,9 +15,14 @@
     "build:tsc": "yarn tsc --outDir dist",
     "build:alias": "tsc-alias -p tsconfig.json"
   },
+  "dependencies": {
+    "@gorhom/bottom-sheet": "5.0.0-alpha.10",
+    "react-native-reanimated": "~3.6.2"
+  },
   "peerDependencies": {
     "react": "18.2.0",
-    "react-native": "0.73.2"
+    "react-native": "0.73.2",
+    "react-native-reanimated": "~3.6.2"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
