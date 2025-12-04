@@ -1,22 +1,22 @@
 import { useMemo, useRef } from "react";
 import {
-  BottomSheetControlRef,
-  BottomSheetController,
-  BottomSheetModalProps,
+  CupistBottomSheetController,
+  CupistBottomSheetControlRef,
+  CupistBottomSheetModalProps,
 } from "./BottomSheetController";
 import {
-  DefaultBottomSheetComponent,
-  useBottomSheet as useBottomSheetContext,
+  CupistDefaultBottomSheetComponent,
+  useCupistBottomSheetContext,
 } from "./BottomSheetProvider";
 
-type BottomSheetOpenOptions<P extends BottomSheetModalProps> = {
+type CupistBottomSheetOpenOptions<P extends CupistBottomSheetModalProps> = {
   /**
    * ModalComponent에 전달할 추가 props
    */
   modalProps?: Omit<P, "onDismiss">;
 };
 
-type BottomSheetHookReturnType = {
+type CupistBottomSheetHookReturnType = {
   /**
    * Bottom sheet를 열고 컨텐츠를 표시합니다
    * @param ModalComponent - open, close 메서드를 가진 ref와 onDismiss prop을 가지는 컴포넌트
@@ -25,8 +25,8 @@ type BottomSheetHookReturnType = {
    */
   open: (
     component: JSX.Element,
-    options?: BottomSheetOpenOptions<BottomSheetModalProps> & {
-      ModalComponent?: DefaultBottomSheetComponent;
+    options?: CupistBottomSheetOpenOptions<CupistBottomSheetModalProps> & {
+      ModalComponent?: CupistDefaultBottomSheetComponent;
     },
   ) => void;
   /**
@@ -35,18 +35,18 @@ type BottomSheetHookReturnType = {
   close: () => void;
 };
 
-export function useCupistBottomSheet(): BottomSheetHookReturnType {
-  const context = useBottomSheetContext();
+export function useCupistBottomSheet(): CupistBottomSheetHookReturnType {
+  const context = useCupistBottomSheetContext();
 
   const { mount, unmount, DefaultBottomSheet } = context;
 
-  const controllerRef = useRef<BottomSheetControlRef | null>(null);
+  const controllerRef = useRef<CupistBottomSheetControlRef | null>(null);
 
   return useMemo(
     () => ({
       open: (component, options = {}) => {
         mount(
-          <BottomSheetController
+          <CupistBottomSheetController
             key={Date.now()}
             ref={controllerRef}
             ModalComponent={options.ModalComponent ?? DefaultBottomSheet}
@@ -54,7 +54,7 @@ export function useCupistBottomSheet(): BottomSheetHookReturnType {
             onDismiss={unmount}
           >
             {component}
-          </BottomSheetController>,
+          </CupistBottomSheetController>,
         );
       },
       close: () => {

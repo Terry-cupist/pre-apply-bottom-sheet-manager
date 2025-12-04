@@ -10,16 +10,16 @@ import {
 } from "react";
 import { BottomSheetModalProvider } from "./bottomSheet";
 import {
-  BottomSheetModalProps,
-  BottomSheetModalRef,
+  CupistBottomSheetModalProps,
+  CupistBottomSheetModalRef,
 } from "./BottomSheetController";
 
-export type DefaultBottomSheetComponent = React.ForwardRefExoticComponent<
-  BottomSheetModalProps & React.RefAttributes<BottomSheetModalRef>
+export type CupistDefaultBottomSheetComponent = React.ForwardRefExoticComponent<
+  CupistBottomSheetModalProps & React.RefAttributes<CupistBottomSheetModalRef>
 >;
 
-type BottomSheetContextType = {
-  DefaultBottomSheet: DefaultBottomSheetComponent;
+type CupistBottomSheetContextType = {
+  DefaultBottomSheet: CupistDefaultBottomSheetComponent;
   mount(el: ReactNode): void;
   unmount(): void;
 } | null;
@@ -29,13 +29,14 @@ interface PendingMount {
   resolve: () => void;
 }
 
-export interface BottomSheetProviderProps extends PropsWithChildren {
-  DefaultBottomSheet: DefaultBottomSheetComponent;
+export interface CupistBottomSheetProviderProps extends PropsWithChildren {
+  DefaultBottomSheet: CupistDefaultBottomSheetComponent;
 }
 
-export const BottomSheetContext = createContext<BottomSheetContextType>(null);
-export const useBottomSheet = () => {
-  const context = useContext(BottomSheetContext);
+export const CupistBottomSheetContext =
+  createContext<CupistBottomSheetContextType>(null);
+export const useCupistBottomSheetContext = () => {
+  const context = useContext(CupistBottomSheetContext);
 
   if (context === null) {
     throw new Error(
@@ -45,10 +46,10 @@ export const useBottomSheet = () => {
   return context;
 };
 
-export function BottomSheetProvider({
+export function CupistBottomSheetProvider({
   children,
   DefaultBottomSheet,
-}: BottomSheetProviderProps) {
+}: CupistBottomSheetProviderProps) {
   const [element, setElement] = useState<ReactNode | null>(null);
 
   const elementRef = useRef<ReactNode | null>(element);
@@ -101,11 +102,11 @@ export function BottomSheetProvider({
   );
 
   return (
-    <BottomSheetContext.Provider value={context}>
+    <CupistBottomSheetContext.Provider value={context}>
       <BottomSheetModalProvider>
         {children}
         {element}
       </BottomSheetModalProvider>
-    </BottomSheetContext.Provider>
+    </CupistBottomSheetContext.Provider>
   );
 }

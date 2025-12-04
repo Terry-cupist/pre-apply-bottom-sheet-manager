@@ -12,7 +12,7 @@ import {
 /**
  * Bottom sheet 컴포넌트가 가져야 하는 ref 메서드 인터페이스
  */
-export interface BottomSheetModalRef {
+export interface CupistBottomSheetModalRef {
   open: () => void;
   close: () => void;
 }
@@ -20,7 +20,7 @@ export interface BottomSheetModalRef {
 /**
  * Bottom sheet 컴포넌트가 받아야 하는 props 인터페이스
  */
-export interface BottomSheetModalProps extends PropsWithChildren {
+export interface CupistBottomSheetModalProps extends PropsWithChildren {
   onDismiss: () => void;
   [key: string]: any;
 }
@@ -28,7 +28,7 @@ export interface BottomSheetModalProps extends PropsWithChildren {
 /**
  * BottomSheetController가 외부에 노출하는 ref 인터페이스
  */
-export interface BottomSheetControlRef {
+export interface CupistBottomSheetControlRef {
   close: () => void;
 }
 
@@ -39,19 +39,19 @@ interface Props {
    * - onDismiss prop 필수
    */
   ModalComponent: React.ForwardRefExoticComponent<
-    BottomSheetModalProps & React.RefAttributes<BottomSheetModalRef>
+    CupistBottomSheetModalProps & React.RefAttributes<CupistBottomSheetModalRef>
   >;
   /**
    * ModalComponent에 전달할 추가 props
    */
-  modalProps?: Omit<BottomSheetModalProps, "onDismiss">;
+  modalProps?: Omit<CupistBottomSheetModalProps, "onDismiss">;
   /**
    * Bottom sheet가 닫힐 때 호출되는 콜백
    */
   onDismiss: () => void;
 }
 
-export const BottomSheetController = forwardRef(
+export const CupistBottomSheetController = forwardRef(
   (
     {
       children,
@@ -59,9 +59,9 @@ export const BottomSheetController = forwardRef(
       modalProps,
       onDismiss,
     }: PropsWithChildren<Props>,
-    ref: Ref<BottomSheetControlRef>,
+    ref: Ref<CupistBottomSheetControlRef>,
   ) => {
-    const bottomSheetRef = useRef<BottomSheetModalRef>(null);
+    const bottomSheetRef = useRef<CupistBottomSheetModalRef>(null);
     const [isOpenBottomSheet, setIsOpenBottomSheet] = useState(false);
 
     const handleBottomSheetClose = useCallback(
@@ -88,7 +88,7 @@ export const BottomSheetController = forwardRef(
     return (
       <ModalComponent
         ref={bottomSheetRef}
-        {...(modalProps as BottomSheetModalProps)}
+        {...(modalProps as CupistBottomSheetModalProps)}
         onDismiss={onDismiss}
       >
         {children}

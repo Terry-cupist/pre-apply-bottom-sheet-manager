@@ -7,15 +7,15 @@
 
 export * from "./bottomSheet";
 export {
-  BottomSheetController,
-  type BottomSheetControlRef,
-  type BottomSheetModalProps,
-  type BottomSheetModalRef,
+  CupistBottomSheetController,
+  type CupistBottomSheetControlRef,
+  type CupistBottomSheetModalProps,
+  type CupistBottomSheetModalRef,
 } from "./BottomSheetController";
 export {
-  BottomSheetContext,
-  BottomSheetProvider,
-  BottomSheetProviderProps,
-  DefaultBottomSheetComponent,
+  CupistBottomSheetContext,
+  CupistBottomSheetProvider,
+  CupistBottomSheetProviderProps,
+  CupistDefaultBottomSheetComponent,
 } from "./BottomSheetProvider";
 export { useCupistBottomSheet } from "./useBottomSheet";
