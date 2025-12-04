@@ -1,6 +1,5 @@
 import {
   createContext,
-  Fragment,
   PropsWithChildren,
   ReactNode,
   useCallback,
@@ -9,6 +8,7 @@ import {
   useRef,
   useState,
 } from "react";
+import { BottomSheetModalProvider } from "./bottomSheet";
 import {
   BottomSheetModalProps,
   BottomSheetModalRef,
@@ -30,9 +30,6 @@ interface PendingMount {
 }
 
 export interface BottomSheetProviderProps extends PropsWithChildren {
-  Provider?:
-    | ((props: PropsWithChildren) => React.JSX.Element)
-    | React.ExoticComponent;
   DefaultBottomSheet: DefaultBottomSheetComponent;
 }
 
@@ -50,7 +47,6 @@ export const useBottomSheet = () => {
 
 export function BottomSheetProvider({
   children,
-  Provider = Fragment,
   DefaultBottomSheet,
 }: BottomSheetProviderProps) {
   const [element, setElement] = useState<ReactNode | null>(null);
@@ -106,10 +102,10 @@ export function BottomSheetProvider({
 
   return (
     <BottomSheetContext.Provider value={context}>
-      <Provider>
+      <BottomSheetModalProvider>
         {children}
         {element}
-      </Provider>
+      </BottomSheetModalProvider>
     </BottomSheetContext.Provider>
   );
 }

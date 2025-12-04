@@ -5,6 +5,7 @@
  * This package manages bottom sheet state and lifecycle without depending on specific UI libraries.
  */
 
+export * from "./bottomSheet";
 export {
   BottomSheetController,
   type BottomSheetControlRef,
