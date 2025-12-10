@@ -1,5 +1,6 @@
 import {
   forwardRef,
+  Fragment,
   PropsWithChildren,
   Ref,
   useCallback,
@@ -53,6 +54,8 @@ interface Props {
    * ModalComponent에 전달할 추가 props
    */
   modalProps?: Omit<CupistBottomSheetModalProps, "onDismiss">;
+  ContainerComponent?: React.ForwardRefExoticComponent<any>;
+  containerProps?: any;
   /**
    * Bottom sheet가 닫힐 때 호출되는 콜백
    */
@@ -65,6 +68,8 @@ export const CupistBottomSheetController = forwardRef(
       children,
       ModalComponent,
       modalProps,
+      ContainerComponent,
+      containerProps,
       onDismiss,
     }: PropsWithChildren<Props>,
     ref: Ref<CupistBottomSheetControlRef>,
@@ -114,13 +119,16 @@ export const CupistBottomSheetController = forwardRef(
       height: insetHeight.value,
     }));
 
+    const Container = ContainerComponent ?? Fragment;
+    const _containerProps = containerProps ?? null;
+
     return (
       <ModalComponent
         ref={bottomSheetRef}
         {...(modalProps as CupistBottomSheetModalProps)}
         onDismiss={onDismiss}
       >
-        {children}
+        <Container {..._containerProps}>{children}</Container>
         <Animated.View style={[style.inset, animatedStyle]} />
       </ModalComponent>
     );
@@ -130,5 +138,6 @@ export const CupistBottomSheetController = forwardRef(
 const style = StyleSheet.create({
   inset: {
     width: "100%",
+    backgroundColor: "red",
   },
 });
