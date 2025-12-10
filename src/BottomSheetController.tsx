@@ -128,8 +128,10 @@ export const CupistBottomSheetController = forwardRef(
         {...(modalProps as CupistBottomSheetModalProps)}
         onDismiss={onDismiss}
       >
-        <Container {..._containerProps}>{children}</Container>
-        <Animated.View style={[style.inset, animatedStyle]} />
+        <Container {..._containerProps}>
+          {children}
+          <Animated.View style={[style.inset, animatedStyle]} />
+        </Container>
       </ModalComponent>
     );
   },

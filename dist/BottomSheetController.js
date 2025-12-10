@@ -52,7 +52,7 @@ var react_native_reanimated_1 = __importStar(require("react-native-reanimated"))
 var react_native_safe_area_context_1 = require("react-native-safe-area-context");
 var useKeyboard_1 = require("./useKeyboard");
 exports.CupistBottomSheetController = (0, react_1.forwardRef)(function (_a, ref) {
-    var children = _a.children, ModalComponent = _a.ModalComponent, modalProps = _a.modalProps, onDismiss = _a.onDismiss;
+    var children = _a.children, ModalComponent = _a.ModalComponent, modalProps = _a.modalProps, ContainerComponent = _a.ContainerComponent, containerProps = _a.containerProps, onDismiss = _a.onDismiss;
     var bottomSheetRef = (0, react_1.useRef)(null);
     var _b = (0, react_1.useState)(false), isOpenBottomSheet = _b[0], setIsOpenBottomSheet = _b[1];
     var bottomInset = (0, react_native_safe_area_context_1.useSafeAreaInsets)().bottom;
@@ -90,11 +90,14 @@ exports.CupistBottomSheetController = (0, react_1.forwardRef)(function (_a, ref)
     var animatedStyle = (0, react_native_reanimated_1.useAnimatedStyle)(function () { return ({
         height: insetHeight.value,
     }); });
-    return ((0, jsx_runtime_1.jsxs)(ModalComponent, __assign({ ref: bottomSheetRef }, modalProps, { onDismiss: onDismiss, children: [children, (0, jsx_runtime_1.jsx)(react_native_reanimated_1.default.View, { style: [style.inset, animatedStyle] })] })));
+    var Container = ContainerComponent !== null && ContainerComponent !== void 0 ? ContainerComponent : react_1.Fragment;
+    var _containerProps = containerProps !== null && containerProps !== void 0 ? containerProps : null;
+    return ((0, jsx_runtime_1.jsx)(ModalComponent, __assign({ ref: bottomSheetRef }, modalProps, { onDismiss: onDismiss, children: (0, jsx_runtime_1.jsxs)(Container, __assign({}, _containerProps, { children: [children, (0, jsx_runtime_1.jsx)(react_native_reanimated_1.default.View, { style: [style.inset, animatedStyle] })] })) })));
 });
 var style = react_native_1.StyleSheet.create({
     inset: {
         width: "100%",
+        backgroundColor: "red",
     },
 });
 //# sourceMappingURL=BottomSheetController.js.map

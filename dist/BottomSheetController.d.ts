@@ -30,6 +30,8 @@ interface Props {
      * ModalComponent에 전달할 추가 props
      */
     modalProps?: Omit<CupistBottomSheetModalProps, "onDismiss">;
+    ContainerComponent?: React.ForwardRefExoticComponent<any>;
+    containerProps?: any;
     /**
      * Bottom sheet가 닫힐 때 호출되는 콜백
      */

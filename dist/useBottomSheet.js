@@ -13,7 +13,7 @@ function useCupistBottomSheet() {
         open: function (component, options) {
             var _a;
             if (options === void 0) { options = {}; }
-            mount((0, jsx_runtime_1.jsx)(BottomSheetController_1.CupistBottomSheetController, { ref: controllerRef, ModalComponent: (_a = options.ModalComponent) !== null && _a !== void 0 ? _a : DefaultBottomSheet, modalProps: options.modalProps, onDismiss: unmount, children: component }, Date.now()));
+            mount((0, jsx_runtime_1.jsx)(BottomSheetController_1.CupistBottomSheetController, { ref: controllerRef, ModalComponent: (_a = options.ModalComponent) !== null && _a !== void 0 ? _a : DefaultBottomSheet, modalProps: options.modalProps, ContainerComponent: options.ContainerComponent, containerProps: options.containerProps, onDismiss: unmount, children: component }, Date.now()));
         },
         close: function () {
             var _a;
