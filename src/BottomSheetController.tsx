@@ -8,8 +8,8 @@ import {
   useRef,
   useState,
 } from "react";
-import { StyleSheet, View } from "react-native";
-import {
+import { StyleSheet } from "react-native";
+import Animated, {
   useAnimatedStyle,
   useSharedValue,
   withTiming,
@@ -121,7 +121,7 @@ export const CupistBottomSheetController = forwardRef(
         onDismiss={onDismiss}
       >
         {children}
-        <View style={[style.inset, animatedStyle]} />
+        <Animated.View style={[style.inset, animatedStyle]} />
       </ModalComponent>
     );
   },
