@@ -8,6 +8,7 @@ import {
   useRef,
   useState,
 } from "react";
+import { BottomInsetBar } from "./BottomInsetBar";
 import { BottomSheetModalProvider } from "./bottomSheet";
 import {
   CupistBottomSheetModalProps,
@@ -31,6 +32,7 @@ interface PendingMount {
 
 export interface CupistBottomSheetProviderProps extends PropsWithChildren {
   DefaultBottomSheet: CupistDefaultBottomSheetComponent;
+  bottomInsetColor?: string;
 }
 
 export const CupistBottomSheetContext =
@@ -49,6 +51,7 @@ export const useCupistBottomSheetContext = () => {
 export function CupistBottomSheetProvider({
   children,
   DefaultBottomSheet,
+  bottomInsetColor = "white",
 }: CupistBottomSheetProviderProps) {
   const [element, setElement] = useState<ReactNode | null>(null);
 
@@ -106,6 +109,7 @@ export function CupistBottomSheetProvider({
       <BottomSheetModalProvider>
         {children}
         {element}
+        {element && <BottomInsetBar bottomInsetColor={bottomInsetColor} />}
       </BottomSheetModalProvider>
     </CupistBottomSheetContext.Provider>
   );
