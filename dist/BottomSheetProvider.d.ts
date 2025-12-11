@@ -8,6 +8,7 @@ type CupistBottomSheetContextType = {
 } | null;
 export interface CupistBottomSheetProviderProps extends PropsWithChildren {
     DefaultBottomSheet: CupistDefaultBottomSheetComponent;
+    bottomInsetColor?: string;
 }
 export declare const CupistBottomSheetContext: import("react").Context<CupistBottomSheetContextType>;
 export declare const useCupistBottomSheetContext: () => {
@@ -15,6 +16,6 @@ export declare const useCupistBottomSheetContext: () => {
     mount(el: ReactNode): void;
     unmount(): void;
 };
-export declare function CupistBottomSheetProvider({ children, DefaultBottomSheet, }: CupistBottomSheetProviderProps): import("react/jsx-runtime").JSX.Element;
+export declare function CupistBottomSheetProvider({ children, DefaultBottomSheet, bottomInsetColor, }: CupistBottomSheetProviderProps): import("react/jsx-runtime").JSX.Element;
 export {};
 //# sourceMappingURL=BottomSheetProvider.d.ts.map

@@ -10,14 +10,6 @@ import {
   useRef,
   useState,
 } from "react";
-import { StyleSheet } from "react-native";
-import Animated, {
-  useAnimatedStyle,
-  useSharedValue,
-  withTiming,
-} from "react-native-reanimated";
-import { useSafeAreaInsets } from "react-native-safe-area-context";
-import { useKeyboard } from "./useKeyboard";
 
 /**
  * Bottom sheet 컴포넌트가 가져야 하는 ref 메서드 인터페이스
@@ -81,10 +73,6 @@ export const CupistBottomSheetController = forwardRef(
     const bottomSheetRef = useRef<CupistBottomSheetModalRef>(null);
     const [isOpenBottomSheet, setIsOpenBottomSheet] = useState(false);
 
-    const { bottom: bottomInset } = useSafeAreaInsets();
-    const keyboard = useKeyboard();
-    const insetHeight = useSharedValue(0);
-
     const handleBottomSheetClose = useCallback(
       () => setIsOpenBottomSheet(false),
       [],
@@ -106,23 +94,6 @@ export const CupistBottomSheetController = forwardRef(
       }
     }, [isOpenBottomSheet]);
 
-    useEffect(() => {
-      if (!bottomInset) {
-        return;
-      }
-      if (keyboard.willStatus === "show") {
-        insetHeight.value = withTiming(0, { duration: 100 });
-      } else {
-        insetHeight.value = withTiming(Math.max(12, bottomInset), {
-          duration: 100,
-        });
-      }
-    }, [keyboard.willStatus, bottomInset, insetHeight]);
-
-    const animatedStyle = useAnimatedStyle(() => ({
-      height: insetHeight.value,
-    }));
-
     const Container = ContainerComponent ?? Fragment;
     const _containerProps = containerProps ?? null;
 
@@ -132,18 +103,8 @@ export const CupistBottomSheetController = forwardRef(
         {...(modalProps as CupistBottomSheetModalProps)}
         onDismiss={onDismiss}
       >
-        <Container {..._containerProps}>
-          {children}
-          <Animated.View style={[style.inset, animatedStyle]} />
-        </Container>
+        <Container {..._containerProps}>{children}</Container>
       </ModalComponent>
     );
   },
 );
-
-const style = StyleSheet.create({
-  inset: {
-    width: "100%",
-    backgroundColor: "red",
-  },
-});
