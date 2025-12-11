@@ -27,8 +27,6 @@ type CupistBottomSheetHookReturnType = {
     component: JSX.Element,
     options?: CupistBottomSheetOpenOptions<CupistBottomSheetModalProps> & {
       ModalComponent?: CupistDefaultBottomSheetComponent;
-      ContainerComponent?: React.ForwardRefExoticComponent<any>;
-      containerProps?: any;
     },
   ) => void;
   /**
@@ -53,8 +51,6 @@ export function useCupistBottomSheet(): CupistBottomSheetHookReturnType {
             ref={controllerRef}
             ModalComponent={options.ModalComponent ?? DefaultBottomSheet}
             modalProps={options.modalProps}
-            ContainerComponent={options.ContainerComponent}
-            containerProps={options.containerProps}
             onDismiss={unmount}
           >
             {component}

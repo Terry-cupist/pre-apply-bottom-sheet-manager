@@ -15,8 +15,6 @@ type CupistBottomSheetHookReturnType = {
      */
     open: (component: JSX.Element, options?: CupistBottomSheetOpenOptions<CupistBottomSheetModalProps> & {
         ModalComponent?: CupistDefaultBottomSheetComponent;
-        ContainerComponent?: React.ForwardRefExoticComponent<any>;
-        containerProps?: any;
     }) => void;
     /**
      * 현재 열려있는 bottom sheet를 닫습니다
