@@ -1,3 +1,4 @@
+import { BottomSheetScrollView, BottomSheetView } from "@gorhom/bottom-sheet";
 import { CupistBottomSheetModalProps } from "./BottomSheetController";
 import { CupistDefaultBottomSheetComponent } from "./BottomSheetProvider";
 type CupistBottomSheetOpenOptions<P extends CupistBottomSheetModalProps> = {
@@ -15,6 +16,8 @@ type CupistBottomSheetHookReturnType = {
      */
     open: (component: JSX.Element, options?: CupistBottomSheetOpenOptions<CupistBottomSheetModalProps> & {
         ModalComponent?: CupistDefaultBottomSheetComponent;
+        ContainerComponent?: typeof BottomSheetScrollView | typeof BottomSheetView | React.ForwardRefExoticComponent<any>;
+        containerProps?: any;
     }) => void;
     /**
      * 현재 열려있는 bottom sheet를 닫습니다

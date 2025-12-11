@@ -1,3 +1,4 @@
+import { BottomSheetScrollView, BottomSheetView } from "@gorhom/bottom-sheet";
 import { PropsWithChildren } from "react";
 /**
  * Bottom sheet 컴포넌트가 가져야 하는 ref 메서드 인터페이스
@@ -30,6 +31,8 @@ interface Props {
      * ModalComponent에 전달할 추가 props
      */
     modalProps?: Omit<CupistBottomSheetModalProps, "onDismiss">;
+    ContainerComponent?: typeof BottomSheetScrollView | typeof BottomSheetView | React.ForwardRefExoticComponent<any>;
+    containerProps?: any;
     /**
      * Bottom sheet가 닫힐 때 호출되는 콜백
      */
