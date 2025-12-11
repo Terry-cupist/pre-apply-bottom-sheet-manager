@@ -36,7 +36,7 @@ export const BottomInsetBar = ({
     height: insetHeight.value,
   }));
 
-  if (keyboard.willStatus === "show" || showBottomInset) return null;
+  if (keyboard.willStatus === "show" || !showBottomInset) return null;
 
   return (
     <Animated.View

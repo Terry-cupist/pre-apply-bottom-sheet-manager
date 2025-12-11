@@ -63,7 +63,7 @@ var BottomInsetBar = function (_a) {
     var animatedStyle = (0, react_native_reanimated_1.useAnimatedStyle)(function () { return ({
         height: insetHeight.value,
     }); });
-    if (keyboard.willStatus === "show" || showBottomInset)
+    if (keyboard.willStatus === "show" || !showBottomInset)
         return null;
     return ((0, jsx_runtime_1.jsx)(react_native_reanimated_1.default.View, { style: [
             {
