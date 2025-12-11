@@ -10,6 +10,7 @@ import {
   useRef,
   useState,
 } from "react";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 /**
  * Bottom sheet 컴포넌트가 가져야 하는 ref 메서드 인터페이스
@@ -70,6 +71,7 @@ export const CupistBottomSheetController = forwardRef(
     }: PropsWithChildren<Props>,
     ref: Ref<CupistBottomSheetControlRef>,
   ) => {
+    const { bottom: bottomInset } = useSafeAreaInsets();
     const bottomSheetRef = useRef<CupistBottomSheetModalRef>(null);
     const [isOpenBottomSheet, setIsOpenBottomSheet] = useState(false);
 
@@ -96,10 +98,10 @@ export const CupistBottomSheetController = forwardRef(
 
     const Container = ContainerComponent ?? Fragment;
     const _containerProps = containerProps ?? null;
-
     return (
       <ModalComponent
         ref={bottomSheetRef}
+        bottomInset={Math.max(12, bottomInset)}
         {...(modalProps as CupistBottomSheetModalProps)}
         onDismiss={onDismiss}
       >
