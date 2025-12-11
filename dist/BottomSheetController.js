@@ -14,8 +14,10 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.CupistBottomSheetController = void 0;
 var jsx_runtime_1 = require("react/jsx-runtime");
 var react_1 = require("react");
+var react_native_safe_area_context_1 = require("react-native-safe-area-context");
 exports.CupistBottomSheetController = (0, react_1.forwardRef)(function (_a, ref) {
     var children = _a.children, ModalComponent = _a.ModalComponent, modalProps = _a.modalProps, ContainerComponent = _a.ContainerComponent, containerProps = _a.containerProps, onDismiss = _a.onDismiss;
+    var bottomInset = (0, react_native_safe_area_context_1.useSafeAreaInsets)().bottom;
     var bottomSheetRef = (0, react_1.useRef)(null);
     var _b = (0, react_1.useState)(false), isOpenBottomSheet = _b[0], setIsOpenBottomSheet = _b[1];
     var handleBottomSheetClose = (0, react_1.useCallback)(function () { return setIsOpenBottomSheet(false); }, []);
@@ -36,6 +38,6 @@ exports.CupistBottomSheetController = (0, react_1.forwardRef)(function (_a, ref)
     }, [isOpenBottomSheet]);
     var Container = ContainerComponent !== null && ContainerComponent !== void 0 ? ContainerComponent : react_1.Fragment;
     var _containerProps = containerProps !== null && containerProps !== void 0 ? containerProps : null;
-    return ((0, jsx_runtime_1.jsx)(ModalComponent, __assign({ ref: bottomSheetRef }, modalProps, { onDismiss: onDismiss, children: (0, jsx_runtime_1.jsx)(Container, __assign({}, _containerProps, { children: children })) })));
+    return ((0, jsx_runtime_1.jsx)(ModalComponent, __assign({ ref: bottomSheetRef, bottomInset: Math.max(12, bottomInset) }, modalProps, { onDismiss: onDismiss, children: (0, jsx_runtime_1.jsx)(Container, __assign({}, _containerProps, { children: children })) })));
 });
 //# sourceMappingURL=BottomSheetController.js.map
