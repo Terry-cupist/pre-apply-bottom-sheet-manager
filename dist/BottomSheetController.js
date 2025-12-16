@@ -16,7 +16,6 @@ var jsx_runtime_1 = require("react/jsx-runtime");
 var react_1 = require("react");
 var react_native_reanimated_1 = require("react-native-reanimated");
 var react_native_safe_area_context_1 = require("react-native-safe-area-context");
-var react_native_screens_1 = require("react-native-screens");
 var useKeyboard_1 = require("./useKeyboard");
 exports.CupistBottomSheetController = (0, react_1.forwardRef)(function (_a, ref) {
     var children = _a.children, ModalComponent = _a.ModalComponent, modalProps = _a.modalProps, ContainerComponent = _a.ContainerComponent, containerProps = _a.containerProps, onDismiss = _a.onDismiss;
@@ -62,9 +61,6 @@ exports.CupistBottomSheetController = (0, react_1.forwardRef)(function (_a, ref)
     var animatedStyle = (0, react_native_reanimated_1.useAnimatedStyle)(function () { return ({
         height: insetHeight.value,
     }); });
-    return ((0, jsx_runtime_1.jsx)(ModalComponent, __assign({ ref: bottomSheetRef, bottomInset: Math.max(12, bottomInset) }, modalProps, { containerComponent: function (_a) {
-            var children = _a.children;
-            return ((0, jsx_runtime_1.jsx)(react_native_screens_1.FullWindowOverlay, { children: (0, jsx_runtime_1.jsx)(Container, __assign({}, _containerProps, { children: children })) }));
-        }, onDismiss: onDismiss, children: children })));
+    return ((0, jsx_runtime_1.jsx)(ModalComponent, __assign({ ref: bottomSheetRef }, modalProps, { onDismiss: onDismiss, children: (0, jsx_runtime_1.jsx)(Container, __assign({}, _containerProps, { children: children })) })));
 });
 //# sourceMappingURL=BottomSheetController.js.map

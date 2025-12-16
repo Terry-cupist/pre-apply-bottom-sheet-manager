@@ -16,7 +16,6 @@ import {
   withTiming,
 } from "react-native-reanimated";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
-import { FullWindowOverlay } from "react-native-screens";
 import { useKeyboard } from "./useKeyboard";
 
 /**
@@ -131,16 +130,10 @@ export const CupistBottomSheetController = forwardRef(
     return (
       <ModalComponent
         ref={bottomSheetRef}
-        bottomInset={Math.max(12, bottomInset)}
         {...(modalProps as CupistBottomSheetModalProps)}
-        containerComponent={({ children }: PropsWithChildren) => (
-          <FullWindowOverlay>
-            <Container {..._containerProps}>{children}</Container>
-          </FullWindowOverlay>
-        )}
         onDismiss={onDismiss}
       >
-        {children}
+        <Container {..._containerProps}>{children}</Container>
       </ModalComponent>
     );
   },
