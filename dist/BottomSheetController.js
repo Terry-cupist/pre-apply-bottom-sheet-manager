@@ -47,7 +47,7 @@ exports.CupistBottomSheetController = (0, react_1.forwardRef)(function (_a, ref)
             return;
         }
         if (keyboard.willStatus === "show") {
-            insetHeight.value = (0, react_native_reanimated_1.withTiming)(0, { duration: 100 });
+            insetHeight.value = (0, react_native_reanimated_1.withTiming)(0, { duration: 0 });
         }
         else {
             insetHeight.value = (0, react_native_reanimated_1.withTiming)(Math.max(12, bottomInset), {

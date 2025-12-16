@@ -113,7 +113,7 @@ export const CupistBottomSheetController = forwardRef(
       }
 
       if (keyboard.willStatus === "show") {
-        insetHeight.value = withTiming(0, { duration: 100 });
+        insetHeight.value = withTiming(0, { duration: 0 });
       } else {
         insetHeight.value = withTiming(Math.max(12, bottomInset), {
           duration: 100,
