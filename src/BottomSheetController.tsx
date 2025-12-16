@@ -10,7 +10,6 @@ import {
   useRef,
   useState,
 } from "react";
-import { Animated } from "react-native";
 import {
   useAnimatedStyle,
   useSharedValue,
@@ -78,6 +77,8 @@ export const CupistBottomSheetController = forwardRef(
     }: PropsWithChildren<Props>,
     ref: Ref<CupistBottomSheetControlRef>,
   ) => {
+    const keyboard = useKeyboard();
+    const insetHeight = useSharedValue(0);
     const { bottom: bottomInset } = useSafeAreaInsets();
     const bottomSheetRef = useRef<CupistBottomSheetModalRef>(null);
     const [isOpenBottomSheet, setIsOpenBottomSheet] = useState(false);
@@ -106,39 +107,30 @@ export const CupistBottomSheetController = forwardRef(
     const Container = ContainerComponent ?? Fragment;
     const _containerProps = containerProps ?? null;
 
-    const keyboard = useKeyboard();
-    const insetHeight = useSharedValue(0);
-    const [showBottomInset, setShowBottomInset] = useState(false);
-
     useEffect(() => {
       if (!bottomInset) {
         return;
       }
+
       if (keyboard.willStatus === "show") {
-        setShowBottomInset(false);
         insetHeight.value = withTiming(0, { duration: 100 });
       } else {
-        setShowBottomInset(true);
         insetHeight.value = withTiming(Math.max(12, bottomInset), {
           duration: 100,
         });
       }
     }, [keyboard.willStatus, bottomInset, insetHeight]);
 
-    const animatedStyle = useAnimatedStyle(() => ({
-      height: insetHeight.value,
-      backgroundColor: "red",
-    }));
+    const animatedStyle = useAnimatedStyle(() => ({ top: insetHeight.value }));
+
     return (
       <ModalComponent
         ref={bottomSheetRef}
         {...(modalProps as CupistBottomSheetModalProps)}
+        style={[modalProps?.style, animatedStyle]}
         onDismiss={onDismiss}
       >
-        <Container {..._containerProps}>
-          {children}
-          <Animated.View style={animatedStyle} />
-        </Container>
+        <Container {..._containerProps}>{children}</Container>
       </ModalComponent>
     );
   },

@@ -15,8 +15,8 @@ var useCupistBottomSheetContext = function () {
 };
 exports.useCupistBottomSheetContext = useCupistBottomSheetContext;
 function CupistBottomSheetProvider(_a) {
-    var children = _a.children, DefaultBottomSheet = _a.DefaultBottomSheet, _b = _a.bottomInsetColor, bottomInsetColor = _b === void 0 ? "white" : _b;
-    var _c = (0, react_1.useState)(null), element = _c[0], setElement = _c[1];
+    var children = _a.children, DefaultBottomSheet = _a.DefaultBottomSheet;
+    var _b = (0, react_1.useState)(null), element = _b[0], setElement = _b[1];
     var elementRef = (0, react_1.useRef)(element);
     var pendingMountRef = (0, react_1.useRef)(null);
     var pendingResolvedRef = (0, react_1.useRef)(false);
