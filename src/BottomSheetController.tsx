@@ -10,7 +10,14 @@ import {
   useRef,
   useState,
 } from "react";
+import {
+  useAnimatedStyle,
+  useSharedValue,
+  withTiming,
+} from "react-native-reanimated";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
+import { FullWindowOverlay } from "react-native-screens";
+import { useKeyboard } from "./useKeyboard";
 
 /**
  * Bottom sheet 컴포넌트가 가져야 하는 ref 메서드 인터페이스
@@ -98,14 +105,42 @@ export const CupistBottomSheetController = forwardRef(
 
     const Container = ContainerComponent ?? Fragment;
     const _containerProps = containerProps ?? null;
+
+    const keyboard = useKeyboard();
+    const insetHeight = useSharedValue(0);
+    const [showBottomInset, setShowBottomInset] = useState(false);
+
+    useEffect(() => {
+      if (!bottomInset) {
+        return;
+      }
+      if (keyboard.willStatus === "show") {
+        setShowBottomInset(false);
+        insetHeight.value = withTiming(0, { duration: 100 });
+      } else {
+        setShowBottomInset(true);
+        insetHeight.value = withTiming(Math.max(12, bottomInset), {
+          duration: 100,
+        });
+      }
+    }, [keyboard.willStatus, bottomInset, insetHeight]);
+
+    const animatedStyle = useAnimatedStyle(() => ({
+      height: insetHeight.value,
+    }));
     return (
       <ModalComponent
         ref={bottomSheetRef}
         bottomInset={Math.max(12, bottomInset)}
         {...(modalProps as CupistBottomSheetModalProps)}
+        containerComponent={({ children }: PropsWithChildren) => (
+          <FullWindowOverlay>
+            <Container {..._containerProps}>{children}</Container>
+          </FullWindowOverlay>
+        )}
         onDismiss={onDismiss}
       >
-        <Container {..._containerProps}>{children}</Container>
+        {children}
       </ModalComponent>
     );
   },

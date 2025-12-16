@@ -8,7 +8,6 @@ import {
   useRef,
   useState,
 } from "react";
-import { BottomInsetBar } from "./BottomInsetBar";
 import { BottomSheetModalProvider } from "./bottomSheet";
 import {
   CupistBottomSheetModalProps,
@@ -109,7 +108,6 @@ export function CupistBottomSheetProvider({
       <BottomSheetModalProvider>
         {children}
         {element}
-        {element && <BottomInsetBar bottomInsetColor={bottomInsetColor} />}
       </BottomSheetModalProvider>
     </CupistBottomSheetContext.Provider>
   );
