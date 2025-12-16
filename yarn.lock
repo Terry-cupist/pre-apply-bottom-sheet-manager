@@ -404,10 +404,10 @@
   resolved "http://localhost:4873/@eslint/js/-/js-8.57.1.tgz#de633db3ec2ef6a3c89e2f19038063e8a122e2c2"
   integrity sha512-d9zaMRSTIKDLhctzH12MtXvJKSSUhaHcjV+2Z+GK+EEY7XKpP5yR4x+N3TAcHTcu963nIr+TMcCb4DBCYX1z6Q==
 
-"@gorhom/bottom-sheet@5.0.0-alpha.10":
-  version "5.0.0-alpha.10"
-  resolved "http://localhost:4873/@gorhom/bottom-sheet/-/bottom-sheet-5.0.0-alpha.10.tgz#e3e828f41fc4d8497eba0b230a36edd3da199c48"
-  integrity sha512-FjiNf2VtmCEWC4T6/1CHjNYHlgqq+eQAGp0jCSDm87nEWtzmvg6vhspttpRNqGCxj40//Z03BGw/JZR+AYhP0w==
+"@gorhom/bottom-sheet@5.0.0-alpha.11":
+  version "5.0.0-alpha.11"
+  resolved "http://localhost:4873/@gorhom/bottom-sheet/-/bottom-sheet-5.0.0-alpha.11.tgz#70c1b827c8b5ac95cebe6348ce1bcfe014a8137e"
+  integrity sha512-AQ4hN72NgFrW7EKz9N2CiuOj655csKi74OMO992z2+ds1rJ9c7EDF5HsJRtFpPA+cV9I03nqURMipi1u91OjRQ==
   dependencies:
     "@gorhom/portal" "1.0.14"
     invariant "^2.2.4"

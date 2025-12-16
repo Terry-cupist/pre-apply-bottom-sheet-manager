@@ -16,7 +16,7 @@
     "build:alias": "tsc-alias -p tsconfig.json"
   },
   "dependencies": {
-    "@gorhom/bottom-sheet": "5.0.0-alpha.10",
+    "@gorhom/bottom-sheet": "5.0.0-alpha.11",
     "react-native-reanimated": "~3.6.2",
     "react-native-safe-area-context": "4.8.2"
   },
