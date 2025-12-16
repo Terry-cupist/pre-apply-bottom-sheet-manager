@@ -121,7 +121,7 @@ export const CupistBottomSheetController = forwardRef(
       }
     }, [keyboard.willStatus, bottomInset, insetHeight]);
 
-    const animatedStyle = useAnimatedStyle(() => ({ top: insetHeight.value }));
+    const animatedStyle = useAnimatedStyle(() => ({ top: -insetHeight.value }));
 
     return (
       <ModalComponent

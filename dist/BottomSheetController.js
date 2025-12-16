@@ -55,7 +55,7 @@ exports.CupistBottomSheetController = (0, react_1.forwardRef)(function (_a, ref)
             });
         }
     }, [keyboard.willStatus, bottomInset, insetHeight]);
-    var animatedStyle = (0, react_native_reanimated_1.useAnimatedStyle)(function () { return ({ top: insetHeight.value }); });
+    var animatedStyle = (0, react_native_reanimated_1.useAnimatedStyle)(function () { return ({ top: -insetHeight.value }); });
     return ((0, jsx_runtime_1.jsx)(ModalComponent, __assign({ ref: bottomSheetRef }, modalProps, { style: [modalProps === null || modalProps === void 0 ? void 0 : modalProps.style, animatedStyle], onDismiss: onDismiss, children: (0, jsx_runtime_1.jsx)(Container, __assign({}, _containerProps, { children: children })) })));
 });
 //# sourceMappingURL=BottomSheetController.js.map
