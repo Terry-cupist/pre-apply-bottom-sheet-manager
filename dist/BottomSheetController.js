@@ -14,6 +14,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.CupistBottomSheetController = void 0;
 var jsx_runtime_1 = require("react/jsx-runtime");
 var react_1 = require("react");
+var react_native_1 = require("react-native");
 var react_native_reanimated_1 = require("react-native-reanimated");
 var react_native_safe_area_context_1 = require("react-native-safe-area-context");
 var useKeyboard_1 = require("./useKeyboard");
@@ -60,7 +61,8 @@ exports.CupistBottomSheetController = (0, react_1.forwardRef)(function (_a, ref)
     }, [keyboard.willStatus, bottomInset, insetHeight]);
     var animatedStyle = (0, react_native_reanimated_1.useAnimatedStyle)(function () { return ({
         height: insetHeight.value,
+        backgroundColor: "red",
     }); });
-    return ((0, jsx_runtime_1.jsx)(ModalComponent, __assign({ ref: bottomSheetRef }, modalProps, { onDismiss: onDismiss, children: (0, jsx_runtime_1.jsx)(Container, __assign({}, _containerProps, { children: children })) })));
+    return ((0, jsx_runtime_1.jsx)(ModalComponent, __assign({ ref: bottomSheetRef }, modalProps, { onDismiss: onDismiss, children: (0, jsx_runtime_1.jsxs)(Container, __assign({}, _containerProps, { children: [children, (0, jsx_runtime_1.jsx)(react_native_1.Animated.View, { style: animatedStyle })] })) })));
 });
 //# sourceMappingURL=BottomSheetController.js.map

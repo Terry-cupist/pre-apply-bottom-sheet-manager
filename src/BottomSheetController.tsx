@@ -10,6 +10,7 @@ import {
   useRef,
   useState,
 } from "react";
+import { Animated } from "react-native";
 import {
   useAnimatedStyle,
   useSharedValue,
@@ -126,6 +127,7 @@ export const CupistBottomSheetController = forwardRef(
 
     const animatedStyle = useAnimatedStyle(() => ({
       height: insetHeight.value,
+      backgroundColor: "red",
     }));
     return (
       <ModalComponent
@@ -133,7 +135,10 @@ export const CupistBottomSheetController = forwardRef(
         {...(modalProps as CupistBottomSheetModalProps)}
         onDismiss={onDismiss}
       >
-        <Container {..._containerProps}>{children}</Container>
+        <Container {..._containerProps}>
+          {children}
+          <Animated.View style={animatedStyle} />
+        </Container>
       </ModalComponent>
     );
   },

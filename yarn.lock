@@ -372,6 +372,13 @@
     "@babel/helper-string-parser" "^7.27.1"
     "@babel/helper-validator-identifier" "^7.28.5"
 
+"@egjs/hammerjs@^2.0.17":
+  version "2.0.17"
+  resolved "http://localhost:4873/@egjs/hammerjs/-/hammerjs-2.0.17.tgz#5dc02af75a6a06e4c2db0202cae38c9263895124"
+  integrity sha512-XQsZgjm2EcVUiZQf11UBJQfmZeEmOW8DpI1gsFeln6w0ae0ii4dMQEQ0kjl6DspdWX1aGY1/loyXnP0JS06e/A==
+  dependencies:
+    "@types/hammerjs" "^2.0.36"
+
 "@eslint-community/eslint-utils@^4.2.0", "@eslint-community/eslint-utils@^4.4.0":
   version "4.9.0"
   resolved "http://localhost:4873/@eslint-community/eslint-utils/-/eslint-utils-4.9.0.tgz#7308df158e064f0dd8b8fdb58aa14fa2a7f913b3"
@@ -404,10 +411,10 @@
   resolved "http://localhost:4873/@eslint/js/-/js-8.57.1.tgz#de633db3ec2ef6a3c89e2f19038063e8a122e2c2"
   integrity sha512-d9zaMRSTIKDLhctzH12MtXvJKSSUhaHcjV+2Z+GK+EEY7XKpP5yR4x+N3TAcHTcu963nIr+TMcCb4DBCYX1z6Q==
 
-"@gorhom/bottom-sheet@5.0.0-alpha.11":
-  version "5.0.0-alpha.11"
-  resolved "http://localhost:4873/@gorhom/bottom-sheet/-/bottom-sheet-5.0.0-alpha.11.tgz#70c1b827c8b5ac95cebe6348ce1bcfe014a8137e"
-  integrity sha512-AQ4hN72NgFrW7EKz9N2CiuOj655csKi74OMO992z2+ds1rJ9c7EDF5HsJRtFpPA+cV9I03nqURMipi1u91OjRQ==
+"@gorhom/bottom-sheet@5.0.0-alpha.10":
+  version "5.0.0-alpha.10"
+  resolved "http://localhost:4873/@gorhom/bottom-sheet/-/bottom-sheet-5.0.0-alpha.10.tgz#e3e828f41fc4d8497eba0b230a36edd3da199c48"
+  integrity sha512-FjiNf2VtmCEWC4T6/1CHjNYHlgqq+eQAGp0jCSDm87nEWtzmvg6vhspttpRNqGCxj40//Z03BGw/JZR+AYhP0w==
   dependencies:
     "@gorhom/portal" "1.0.14"
     invariant "^2.2.4"
@@ -591,15 +598,15 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@react-native/assets-registry@0.82.1":
-  version "0.82.1"
-  resolved "http://localhost:4873/@react-native/assets-registry/-/assets-registry-0.82.1.tgz#834058f9391fa7aa85404f833ece2ab70754a332"
-  integrity sha512-B1SRwpntaAcckiatxbjzylvNK562Ayza05gdJCjDQHTiDafa1OABmyB5LHt7qWDOpNkaluD+w11vHF7pBmTpzQ==
+"@react-native/assets-registry@0.83.0":
+  version "0.83.0"
+  resolved "http://localhost:4873/@react-native/assets-registry/-/assets-registry-0.83.0.tgz#81a4a3c48069f4e2e4e9d55dbd4fbcb8102246be"
+  integrity sha512-EmGSKDvmnEnBrTK75T+0Syt6gy/HACOTfziw5+392Kr1Bb28Rv26GyOIkvptnT+bb2VDHU0hx9G0vSy5/S3rmQ==
 
-"@react-native/codegen@0.82.1":
-  version "0.82.1"
-  resolved "http://localhost:4873/@react-native/codegen/-/codegen-0.82.1.tgz#d51fae22e0ae488be011526cb1bf07e403d50832"
-  integrity sha512-ezXTN70ygVm9l2m0i+pAlct0RntoV4afftWMGUIeAWLgaca9qItQ54uOt32I/9dBJvzBibT33luIR/pBG0dQvg==
+"@react-native/codegen@0.83.0":
+  version "0.83.0"
+  resolved "http://localhost:4873/@react-native/codegen/-/codegen-0.83.0.tgz#7741f906892c257d5a35bfea38e45d68faa869de"
+  integrity sha512-3fvMi/pSJHhikjwMZQplU4Ar9ANoR2GSBxotbkKIMI6iNduh+ln1FTvB2me69FA68aHtVZOO+cO+QpGCcvgaMA==
   dependencies:
     "@babel/core" "^7.25.2"
     "@babel/parser" "^7.25.3"
@@ -609,40 +616,40 @@
     nullthrows "^1.1.1"
     yargs "^17.6.2"
 
-"@react-native/community-cli-plugin@0.82.1":
-  version "0.82.1"
-  resolved "http://localhost:4873/@react-native/community-cli-plugin/-/community-cli-plugin-0.82.1.tgz#4ed6545fe4b4daa445df6f5903e237fbc4bd1e77"
-  integrity sha512-H/eMdtOy9nEeX7YVeEG1N2vyCoifw3dr9OV8++xfUElNYV7LtSmJ6AqxZUUfxGJRDFPQvaU/8enmJlM/l11VxQ==
+"@react-native/community-cli-plugin@0.83.0":
+  version "0.83.0"
+  resolved "http://localhost:4873/@react-native/community-cli-plugin/-/community-cli-plugin-0.83.0.tgz#f33388646eb4109f2572c715fb341695369dc48c"
+  integrity sha512-bJD5pLURgKY2YK0R6gUsFWHiblSAFt1Xyc2fsyCL8XBnB7kJfVhLAKGItk6j1QZbwm1Io41ekZxBmZdyQqIDrg==
   dependencies:
-    "@react-native/dev-middleware" "0.82.1"
+    "@react-native/dev-middleware" "0.83.0"
     debug "^4.4.0"
     invariant "^2.2.4"
-    metro "^0.83.1"
-    metro-config "^0.83.1"
-    metro-core "^0.83.1"
+    metro "^0.83.3"
+    metro-config "^0.83.3"
+    metro-core "^0.83.3"
     semver "^7.1.3"
 
-"@react-native/debugger-frontend@0.82.1":
-  version "0.82.1"
-  resolved "http://localhost:4873/@react-native/debugger-frontend/-/debugger-frontend-0.82.1.tgz#4b9dca39806b43e60029d1a0352dd71de910e86f"
-  integrity sha512-a2O6M7/OZ2V9rdavOHyCQ+10z54JX8+B+apYKCQ6a9zoEChGTxUMG2YzzJ8zZJVvYf1ByWSNxv9Se0dca1hO9A==
+"@react-native/debugger-frontend@0.83.0":
+  version "0.83.0"
+  resolved "http://localhost:4873/@react-native/debugger-frontend/-/debugger-frontend-0.83.0.tgz#1ce22e0699ebf80e0737ff5471e47107b97b345d"
+  integrity sha512-7XVbkH8nCjLKLe8z5DS37LNP62/QNNya/YuLlVoLfsiB54nR/kNZij5UU7rS0npAZ3WN7LR0anqLlYnzDd0JHA==
 
-"@react-native/debugger-shell@0.82.1":
-  version "0.82.1"
-  resolved "http://localhost:4873/@react-native/debugger-shell/-/debugger-shell-0.82.1.tgz#0224c75afd135cc755a51c929e59a423f71804d4"
-  integrity sha512-fdRHAeqqPT93bSrxfX+JHPpCXHApfDUdrXMXhoxlPgSzgXQXJDykIViKhtpu0M6slX6xU/+duq+AtP/qWJRpBw==
+"@react-native/debugger-shell@0.83.0":
+  version "0.83.0"
+  resolved "http://localhost:4873/@react-native/debugger-shell/-/debugger-shell-0.83.0.tgz#879f34a7e6c3adc4be8a73a506ea2dba8281b5c8"
+  integrity sha512-rJJxRRLLsKW+cqd0ALSBoqwL5SQTmwpd5SGl6rq9sY+fInCUKfkLEIc5HWQ0ppqoPyDteQVWbQ3a5VN84aJaNg==
   dependencies:
     cross-spawn "^7.0.6"
     fb-dotslash "0.5.8"
 
-"@react-native/dev-middleware@0.82.1":
-  version "0.82.1"
-  resolved "http://localhost:4873/@react-native/dev-middleware/-/dev-middleware-0.82.1.tgz#105d0f7dd4891d9cae2bac9a7e0c3100ed8ef35c"
-  integrity sha512-wuOIzms/Qg5raBV6Ctf2LmgzEOCqdP3p1AYN4zdhMT110c39TVMbunpBaJxm0Kbt2HQ762MQViF9naxk7SBo4w==
+"@react-native/dev-middleware@0.83.0":
+  version "0.83.0"
+  resolved "http://localhost:4873/@react-native/dev-middleware/-/dev-middleware-0.83.0.tgz#1b4d3bf261bfd5ef162161d9ac28c2170fb7397d"
+  integrity sha512-HWn42tbp0h8RWttua6d6PjseaSr3IdwkaoqVxhiM9kVDY7Ro00eO7tdlVgSzZzhIibdVS2b2C3x+sFoWhag1fA==
   dependencies:
     "@isaacs/ttlcache" "^1.4.1"
-    "@react-native/debugger-frontend" "0.82.1"
-    "@react-native/debugger-shell" "0.82.1"
+    "@react-native/debugger-frontend" "0.83.0"
+    "@react-native/debugger-shell" "0.83.0"
     chrome-launcher "^0.15.2"
     chromium-edge-launcher "^0.2.0"
     connect "^3.6.5"
@@ -651,27 +658,27 @@
     nullthrows "^1.1.1"
     open "^7.0.3"
     serve-static "^1.16.2"
-    ws "^6.2.3"
+    ws "^7.5.10"
 
-"@react-native/gradle-plugin@0.82.1":
-  version "0.82.1"
-  resolved "http://localhost:4873/@react-native/gradle-plugin/-/gradle-plugin-0.82.1.tgz#a747810a37f5ce652e6e2f0aa54cff7275d9ced7"
-  integrity sha512-KkF/2T1NSn6EJ5ALNT/gx0MHlrntFHv8YdooH9OOGl9HQn5NM0ZmQSr86o5utJsGc7ME3R6p3SaQuzlsFDrn8Q==
+"@react-native/gradle-plugin@0.83.0":
+  version "0.83.0"
+  resolved "http://localhost:4873/@react-native/gradle-plugin/-/gradle-plugin-0.83.0.tgz#85e00a918a5fd249b4caf1137d0b1a808e510df1"
+  integrity sha512-BXZRmfsbgPhEPkrRPjk2njA2AzhSelBqhuoklnv3DdLTdxaRjKYW+LW0zpKo1k3qPKj7kG1YGI3miol6l1GB5g==
 
-"@react-native/js-polyfills@0.82.1":
-  version "0.82.1"
-  resolved "http://localhost:4873/@react-native/js-polyfills/-/js-polyfills-0.82.1.tgz#f707c1de572b8e46084c4b0bf65f9891f093f416"
-  integrity sha512-tf70X7pUodslOBdLN37J57JmDPB/yiZcNDzS2m+4bbQzo8fhx3eG9QEBv5n4fmzqfGAgSB4BWRHgDMXmmlDSVA==
+"@react-native/js-polyfills@0.83.0":
+  version "0.83.0"
+  resolved "http://localhost:4873/@react-native/js-polyfills/-/js-polyfills-0.83.0.tgz#d45123c150286fb179ee00957d2d9e8ca815ab8c"
+  integrity sha512-cVB9BMqlfbQR0v4Wxi5M2yDhZoKiNqWgiEXpp7ChdZIXI0SEnj8WwLwE3bDkyOfF8tCHdytpInXyg/al2O+dLQ==
 
-"@react-native/normalize-colors@0.82.1":
-  version "0.82.1"
-  resolved "http://localhost:4873/@react-native/normalize-colors/-/normalize-colors-0.82.1.tgz#be49d4f9f56f1a9b3d09cf6e391bb67e51103807"
-  integrity sha512-CCfTR1uX+Z7zJTdt3DNX9LUXr2zWXsNOyLbwupW2wmRzrxlHRYfmLgTABzRL/cKhh0Ubuwn15o72MQChvCRaHw==
+"@react-native/normalize-colors@0.83.0":
+  version "0.83.0"
+  resolved "http://localhost:4873/@react-native/normalize-colors/-/normalize-colors-0.83.0.tgz#3aeb8967552b95400ee6ae1d95f4d11f289e409b"
+  integrity sha512-DG1ELOqQ6RS82R1zEUGTWa/pfSPOf+vwAnQB7Ao1vRuhW/xdd2OPQJyqx5a5QWMYpGrlkCb7ERxEVX6p2QODCA==
 
-"@react-native/virtualized-lists@0.82.1":
-  version "0.82.1"
-  resolved "http://localhost:4873/@react-native/virtualized-lists/-/virtualized-lists-0.82.1.tgz#7a38adfc7d42353a99a225bdd45199384f2e0ec7"
-  integrity sha512-f5zpJg9gzh7JtCbsIwV+4kP3eI0QBuA93JGmwFRd4onQ3DnCjV2J5pYqdWtM95sjSKK1dyik59Gj01lLeKqs1Q==
+"@react-native/virtualized-lists@0.83.0":
+  version "0.83.0"
+  resolved "http://localhost:4873/@react-native/virtualized-lists/-/virtualized-lists-0.83.0.tgz#f65f70d9a5fe744aeb3c9ea6b8c21b39cf849716"
+  integrity sha512-AVnDppwPidQrPrzA4ETr4o9W+40yuijg3EVgFt2hnMldMZkqwPRrgJL2GSreQjCYe1NfM5Yn4Egyy4Kd0yp4Lw==
   dependencies:
     invariant "^2.2.4"
     nullthrows "^1.1.1"
@@ -740,6 +747,11 @@
   dependencies:
     "@types/node" "*"
 
+"@types/hammerjs@^2.0.36":
+  version "2.0.46"
+  resolved "http://localhost:4873/@types/hammerjs/-/hammerjs-2.0.46.tgz#381daaca1360ff8a7c8dff63f32e69745b9fb1e1"
+  integrity sha512-ynRvcq6wvqexJ9brDMS4BnBLzmr0e14d6ZJTEShTBWKymQiHwlAyGu0ZPEFI2Fh1U53F7tN9ufClWM5KvqkKOw==
+
 "@types/istanbul-lib-coverage@*", "@types/istanbul-lib-coverage@^2.0.0":
   version "2.0.6"
   resolved "http://localhost:4873/@types/istanbul-lib-coverage/-/istanbul-lib-coverage-2.0.6.tgz#7739c232a1fee9b4d3ce8985f314c0c6d33549d7"
@@ -765,9 +777,9 @@
   integrity sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==
 
 "@types/node@*":
-  version "24.10.1"
-  resolved "http://localhost:4873/@types/node/-/node-24.10.1.tgz#91e92182c93db8bd6224fca031e2370cef9a8f01"
-  integrity sha512-GNWcUTRBgIRJD5zj+Tq0fKOJ5XZajIiBroOF0yvj2bSU1WvNdYS/dn9UxwsujGW4JX06dnHyjV2y9rRaybH0iQ==
+  version "25.0.2"
+  resolved "http://localhost:4873/@types/node/-/node-25.0.2.tgz#411f9dd6cb2bf5ee46aed7199a9f85ca6b068b4e"
+  integrity sha512-gWEkeiyYE4vqjON/+Obqcoeffmk0NF15WSBwSs7zwVA2bAbTaE0SJ7P0WNGoJn8uE7fiaV5a7dKYIJriEqOrmA==
   dependencies:
     undici-types "~7.16.0"
 
@@ -996,11 +1008,6 @@ asap@~2.0.6:
   resolved "http://localhost:4873/asap/-/asap-2.0.6.tgz#e50347611d7e690943208bbdafebcbc2fb866d46"
   integrity sha512-BSHWgDSAiKs50o2Re8ppvp3seVHXSRM44cdSsT9FfNEUUZLOGWVCsiWaRPWM1Znn+mqZ1OfVZ3z3DWEzSp7hRA==
 
-async-limiter@~1.0.0:
-  version "1.0.1"
-  resolved "http://localhost:4873/async-limiter/-/async-limiter-1.0.1.tgz#dd379e94f0db8310b08291f9d64c3209766617fd"
-  integrity sha512-csOlWGAcRFJaI6m+F2WKdnMKr4HhdhFVBk0H/QbJFMCr+uO2kwohwXQPxw/9OCxp05r5ghVBFSyioixx3gfkNQ==
-
 babel-jest@^29.7.0:
   version "29.7.0"
   resolved "http://localhost:4873/babel-jest/-/babel-jest-29.7.0.tgz#f4369919225b684c56085998ac63dbd05be020d5"
@@ -1092,10 +1099,10 @@ base64-js@^1.5.1:
   resolved "http://localhost:4873/base64-js/-/base64-js-1.5.1.tgz#1b1b440160a5bf7ad40b650f095963481903930a"
   integrity sha512-AKpaYlHn8t4SVbOHCy+b5+KKgvR4vrsD8vbvrbiQJps7fKDTkjkDry6ji0rUJjC0kzbNePLwzxq8iypo41qeWA==
 
-baseline-browser-mapping@^2.8.25:
-  version "2.8.32"
-  resolved "http://localhost:4873/baseline-browser-mapping/-/baseline-browser-mapping-2.8.32.tgz#5de72358cf363ac41e7d642af239f6ac5ed1270a"
-  integrity sha512-OPz5aBThlyLFgxyhdwf/s2+8ab3OvT7AdTNvKHBwpXomIYeXqpUUuT8LrdtxZSsWJ4R4CU1un4XGh5Ez3nlTpw==
+baseline-browser-mapping@^2.9.0:
+  version "2.9.7"
+  resolved "http://localhost:4873/baseline-browser-mapping/-/baseline-browser-mapping-2.9.7.tgz#d36ce64f2a2c468f6f743c8db495d319120007db"
+  integrity sha512-k9xFKplee6KIio3IDbwj+uaCLpqzOwakOgmqzPezM0sFJlFKcg30vk2wOiAJtkTSfx0SSQDSe8q+mWA/fSH5Zg==
 
 binary-extensions@^2.0.0:
   version "2.3.0"
@@ -1125,15 +1132,15 @@ braces@^3.0.3, braces@~3.0.2:
     fill-range "^7.1.1"
 
 browserslist@^4.24.0:
-  version "4.28.0"
-  resolved "http://localhost:4873/browserslist/-/browserslist-4.28.0.tgz#9cefece0a386a17a3cd3d22ebf67b9deca1b5929"
-  integrity sha512-tbydkR/CxfMwelN0vwdP/pLkDwyAASZ+VfWm4EOwlB6SWhx1sYnWLqo8N5j0rAzPfzfRaxt0mM/4wPU/Su84RQ==
+  version "4.28.1"
+  resolved "http://localhost:4873/browserslist/-/browserslist-4.28.1.tgz#7f534594628c53c63101079e27e40de490456a95"
+  integrity sha512-ZC5Bd0LgJXgwGqUknZY/vkUQ04r8NXnJZ3yYi4vDmSiZmC/pdSN0NbNRPxZpbtO4uAfDUAFffO8IZoM3Gj8IkA==
   dependencies:
-    baseline-browser-mapping "^2.8.25"
-    caniuse-lite "^1.0.30001754"
-    electron-to-chromium "^1.5.249"
+    baseline-browser-mapping "^2.9.0"
+    caniuse-lite "^1.0.30001759"
+    electron-to-chromium "^1.5.263"
     node-releases "^2.0.27"
-    update-browserslist-db "^1.1.4"
+    update-browserslist-db "^1.2.0"
 
 bser@2.1.1:
   version "2.1.1"
@@ -1162,10 +1169,10 @@ camelcase@^6.2.0:
   resolved "http://localhost:4873/camelcase/-/camelcase-6.3.0.tgz#5685b95eb209ac9c0c177467778c9c84df58ba9a"
   integrity sha512-Gmy6FhYlCY7uOElZUSbxo2UCDH8owEk996gkbrpsgGtrJLM3J7jGxl9Ic7Qwwj4ivOE5AWZWRMecDdF7hqGjFA==
 
-caniuse-lite@^1.0.30001754:
-  version "1.0.30001759"
-  resolved "http://localhost:4873/caniuse-lite/-/caniuse-lite-1.0.30001759.tgz#d569e7b010372c6b0ca3946e30dada0a2e9d5006"
-  integrity sha512-Pzfx9fOKoKvevQf8oCXoyNRQ5QyxJj+3O0Rqx2V5oxT61KGx8+n6hV/IUyJeifUci2clnmmKVpvtiqRzgiWjSw==
+caniuse-lite@^1.0.30001759:
+  version "1.0.30001760"
+  resolved "http://localhost:4873/caniuse-lite/-/caniuse-lite-1.0.30001760.tgz#bdd1960fafedf8d5f04ff16e81460506ff9b798f"
+  integrity sha512-7AAMPcueWELt1p3mi13HR/LHH0TJLT11cnwDJEs3xA4+CK/PLKeO9Kl1oru24htkyUKtkGCvAx4ohB0Ttry8Dw==
 
 chalk@^4.0.0:
   version "4.1.2"
@@ -1311,7 +1318,7 @@ deep-is@^0.1.3:
   resolved "http://localhost:4873/deep-is/-/deep-is-0.1.4.tgz#a6f2dce612fadd2ef1f519b73551f17e85199831"
   integrity sha512-oIPzksmTg4/MriiaYGO+okXDT7ztn/w3Eptv/+gSIdMdKsJo0u4CfYNFJPy+4SKMuCqGw2wxnA+URMg3t8a/bQ==
 
-depd@2.0.0:
+depd@2.0.0, depd@~2.0.0:
   version "2.0.0"
   resolved "http://localhost:4873/depd/-/depd-2.0.0.tgz#b696163cc757560d09cf22cc8fad1571b79e76df"
   integrity sha512-g7nH6P6dyDioJogAAGprGpCtVImJhpPk/roCzdb3fIh61/s/nPsfR6onyMwkCAR/OlC3yBC0lESvUoQEAssIrw==
@@ -1340,10 +1347,10 @@ ee-first@1.1.1:
   resolved "http://localhost:4873/ee-first/-/ee-first-1.1.1.tgz#590c61156b0ae2f4f0255732a158b266bc56b21d"
   integrity sha512-WMwm9LhRUo+WUaRN+vRuETqG89IgZphVSNkdFgeb6sS/E4OrDIN7t48CAewSHXc6C8lefD8KKfr5vY61brQlow==
 
-electron-to-chromium@^1.5.249:
-  version "1.5.263"
-  resolved "http://localhost:4873/electron-to-chromium/-/electron-to-chromium-1.5.263.tgz#bec8f2887c30001dfacf415c136eae3b4386846a"
-  integrity sha512-DrqJ11Knd+lo+dv+lltvfMDLU27g14LMdH2b0O3Pio4uk0x+z7OR+JrmyacTPN2M8w3BrZ7/RTwG3R9B7irPlg==
+electron-to-chromium@^1.5.263:
+  version "1.5.267"
+  resolved "http://localhost:4873/electron-to-chromium/-/electron-to-chromium-1.5.267.tgz#5d84f2df8cdb6bfe7e873706bb21bd4bfb574dc7"
+  integrity sha512-0Drusm6MVRXSOJpGbaSVgcQsuB4hEkMpHXaVstcPmhu5LIedxs1xNK/nIxmQIU/RPC0+1/o0AVZfBTkTNJOdUw==
 
 emoji-regex@^8.0.0:
   version "8.0.0"
@@ -1618,7 +1625,7 @@ flow-enums-runtime@^0.0.6:
   resolved "http://localhost:4873/flow-enums-runtime/-/flow-enums-runtime-0.0.6.tgz#5bb0cd1b0a3e471330f4d109039b7eba5cb3e787"
   integrity sha512-3PYnM29RFXwvAN6Pc/scUfkI7RwhQ/xqyLUyPNlXUp9S40zI8nup9tUSrTLSVnWGBN38FNiGWbwZOB6uR4OGdw==
 
-fresh@0.5.2:
+fresh@~0.5.2:
   version "0.5.2"
   resolved "http://localhost:4873/fresh/-/fresh-0.5.2.tgz#3d8cadd90d976569fa835ab1f8e4b23a105605a7"
   integrity sha512-zJ2mQYM18rEFOudeV4GShTGIQ7RbzA7ozbU9I/XBpm7kqgMywgmylMwXHxZJmkVoYkna9d2pVXVXPdYTP9ej8Q==
@@ -1737,10 +1744,10 @@ hasown@^2.0.2:
   dependencies:
     function-bind "^1.1.2"
 
-hermes-compiler@0.0.0:
-  version "0.0.0"
-  resolved "http://localhost:4873/hermes-compiler/-/hermes-compiler-0.0.0.tgz#8d9f6a0b2740ce34d71258fec684e7b6bfd97efa"
-  integrity sha512-boVFutx6ME/Km2mB6vvsQcdnazEYYI/jV1pomx1wcFUG/EVqTkr5CU0CW9bKipOA/8Hyu3NYwW3THg2Q1kNCfA==
+hermes-compiler@0.14.0:
+  version "0.14.0"
+  resolved "http://localhost:4873/hermes-compiler/-/hermes-compiler-0.14.0.tgz#ec0ec83132ab5954e7bd2c74e6331752742f188f"
+  integrity sha512-clxa193o+GYYwykWVFfpHduCATz8fR5jvU7ngXpfKHj+E9hr9vjLNtdLSEe8MUbObvVexV3wcyxQ00xTPIrB1Q==
 
 hermes-estree@0.32.0:
   version "0.32.0"
@@ -1754,16 +1761,23 @@ hermes-parser@0.32.0:
   dependencies:
     hermes-estree "0.32.0"
 
-http-errors@2.0.0:
-  version "2.0.0"
-  resolved "http://localhost:4873/http-errors/-/http-errors-2.0.0.tgz#b7774a1486ef73cf7667ac9ae0858c012c57b9d3"
-  integrity sha512-FtwrG/euBzaEjYeRqOgly7G0qviiXoJWnvEH2Z1plBdXgbyjv34pHTSb9zoeHMyDy33+DWy5Wt9Wo+TURtOYSQ==
+hoist-non-react-statics@^3.3.0:
+  version "3.3.2"
+  resolved "http://localhost:4873/hoist-non-react-statics/-/hoist-non-react-statics-3.3.2.tgz#ece0acaf71d62c2969c2ec59feff42a4b1a85b45"
+  integrity sha512-/gGivxi8JPKWNm/W0jSmzcMPpfpPLc3dY/6GxhX2hQ9iGj3aDfklV4ET7NjKpSinLpJ5vafa9iiGIEZg10SfBw==
   dependencies:
-    depd "2.0.0"
-    inherits "2.0.4"
-    setprototypeof "1.2.0"
-    statuses "2.0.1"
-    toidentifier "1.0.1"
+    react-is "^16.7.0"
+
+http-errors@~2.0.1:
+  version "2.0.1"
+  resolved "http://localhost:4873/http-errors/-/http-errors-2.0.1.tgz#36d2f65bc909c8790018dd36fb4d93da6caae06b"
+  integrity sha512-4FbRdAX+bSdmo4AUFuS0WNiPz8NgFt+r8ThgNWmlrjQjt1Q7ZR9+zTlce2859x4KSXrwIsaeTqDoKQmtP8pLmQ==
+  dependencies:
+    depd "~2.0.0"
+    inherits "~2.0.4"
+    setprototypeof "~1.2.0"
+    statuses "~2.0.2"
+    toidentifier "~1.0.1"
 
 https-proxy-agent@^7.0.5:
   version "7.0.6"
@@ -1806,7 +1820,7 @@ inflight@^1.0.4:
     once "^1.3.0"
     wrappy "1"
 
-inherits@2, inherits@2.0.4, inherits@~2.0.3:
+inherits@2, inherits@~2.0.3, inherits@~2.0.4:
   version "2.0.4"
   resolved "http://localhost:4873/inherits/-/inherits-2.0.4.tgz#0fa2c64f932917c3433a0ded55363aae37416b7c"
   integrity sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==
@@ -2101,7 +2115,12 @@ lodash.throttle@^4.1.1:
   resolved "http://localhost:4873/lodash.throttle/-/lodash.throttle-4.1.1.tgz#c23e91b710242ac70c37f1e1cda9274cc39bf2f4"
   integrity sha512-wIkUCfVKpVsWo3JSZlc+8MB5it+2AN5W8J7YVMST30UrvcQNZ1Okbj+rbVniijTWE6FGYy4XJq/rHkas8qJMLQ==
 
-loose-envify@^1.0.0:
+lodash@^4.17.21:
+  version "4.17.21"
+  resolved "http://localhost:4873/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
+  integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
+
+loose-envify@^1.0.0, loose-envify@^1.4.0:
   version "1.4.0"
   resolved "http://localhost:4873/loose-envify/-/loose-envify-1.4.0.tgz#71ee51fa7be4caec1a63839f7e682d8132d30caf"
   integrity sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q==
@@ -2174,7 +2193,7 @@ metro-cache@0.83.3:
     https-proxy-agent "^7.0.5"
     metro-core "0.83.3"
 
-metro-config@0.83.3, metro-config@^0.83.1:
+metro-config@0.83.3, metro-config@^0.83.3:
   version "0.83.3"
   resolved "http://localhost:4873/metro-config/-/metro-config-0.83.3.tgz#a30e7a69b5cf8c4ac4c4b68b1b4c33649ae129a2"
   integrity sha512-mTel7ipT0yNjKILIan04bkJkuCzUUkm2SeEaTads8VfEecCh+ltXchdq6DovXJqzQAXuR2P9cxZB47Lg4klriA==
@@ -2188,7 +2207,7 @@ metro-config@0.83.3, metro-config@^0.83.1:
     metro-runtime "0.83.3"
     yaml "^2.6.1"
 
-metro-core@0.83.3, metro-core@^0.83.1:
+metro-core@0.83.3, metro-core@^0.83.3:
   version "0.83.3"
   resolved "http://localhost:4873/metro-core/-/metro-core-0.83.3.tgz#007e93f7d1983777da8988dfb103ad897c9835b8"
   integrity sha512-M+X59lm7oBmJZamc96usuF1kusd5YimqG/q97g4Ac7slnJ3YiGglW5CsOlicTR5EWf8MQFxxjDoB6ytTqRe8Hw==
@@ -2227,7 +2246,7 @@ metro-resolver@0.83.3:
   dependencies:
     flow-enums-runtime "^0.0.6"
 
-metro-runtime@0.83.3, metro-runtime@^0.83.1:
+metro-runtime@0.83.3, metro-runtime@^0.83.3:
   version "0.83.3"
   resolved "http://localhost:4873/metro-runtime/-/metro-runtime-0.83.3.tgz#ff504df5d93f38b1af396715b327e589ba8d184d"
   integrity sha512-JHCJb9ebr9rfJ+LcssFYA2x1qPYuSD/bbePupIGhpMrsla7RCwC/VL3yJ9cSU+nUhU4c9Ixxy8tBta+JbDeZWw==
@@ -2235,7 +2254,7 @@ metro-runtime@0.83.3, metro-runtime@^0.83.1:
     "@babel/runtime" "^7.25.0"
     flow-enums-runtime "^0.0.6"
 
-metro-source-map@0.83.3, metro-source-map@^0.83.1:
+metro-source-map@0.83.3, metro-source-map@^0.83.3:
   version "0.83.3"
   resolved "http://localhost:4873/metro-source-map/-/metro-source-map-0.83.3.tgz#04bb464f7928ea48bcdfd18912c8607cf317c898"
   integrity sha512-xkC3qwUBh2psVZgVavo8+r2C9Igkk3DibiOXSAht1aYRRcztEZNFtAMtfSB7sdO2iFMx2Mlyu++cBxz/fhdzQg==
@@ -2294,7 +2313,7 @@ metro-transform-worker@0.83.3:
     metro-transform-plugins "0.83.3"
     nullthrows "^1.1.1"
 
-metro@0.83.3, metro@^0.83.1:
+metro@0.83.3, metro@^0.83.3:
   version "0.83.3"
   resolved "http://localhost:4873/metro/-/metro-0.83.3.tgz#1e7e04c15519af746f8932c7f9c553d92c39e922"
   integrity sha512-+rP+/GieOzkt97hSJ0MrPOuAH/jpaS21ZDvL9DJ35QYRDlQcwzcvUlGUf79AnQxq/2NPiS/AULhhM4TKutIt8Q==
@@ -2458,17 +2477,22 @@ ob1@0.83.3:
   dependencies:
     flow-enums-runtime "^0.0.6"
 
-on-finished@2.4.1:
-  version "2.4.1"
-  resolved "http://localhost:4873/on-finished/-/on-finished-2.4.1.tgz#58c8c44116e54845ad57f14ab10b03533184ac3f"
-  integrity sha512-oVlzkg3ENAhCk2zdv7IJwd/QUD4z2RxRwpkcGY8psCVcCYZNq4wYnVWALHM+brtuJjePWiYF/ClmuDr8Ch5+kg==
-  dependencies:
-    ee-first "1.1.1"
+object-assign@^4.1.1:
+  version "4.1.1"
+  resolved "http://localhost:4873/object-assign/-/object-assign-4.1.1.tgz#2109adc7965887cfc05cbbd442cac8bfbb360863"
+  integrity sha512-rJgTQnkUnH1sFw8yT6VSU3zD3sWmu6sZhIseY8VX+GRu3P6F7Fu+JNDoXfklElbLJSnc3FUQHVe4cU5hj+BcUg==
 
 on-finished@~2.3.0:
   version "2.3.0"
   resolved "http://localhost:4873/on-finished/-/on-finished-2.3.0.tgz#20f1336481b083cd75337992a16971aa2d906947"
   integrity sha512-ikqdkGAAyf/X/gPhXGvfgAytDZtDbr+bkNUJ0N9h5MI/dmdgCs3l6hoHrcUv41sRKew3jIwrp4qQDXiK99Utww==
+  dependencies:
+    ee-first "1.1.1"
+
+on-finished@~2.4.1:
+  version "2.4.1"
+  resolved "http://localhost:4873/on-finished/-/on-finished-2.4.1.tgz#58c8c44116e54845ad57f14ab10b03533184ac3f"
+  integrity sha512-oVlzkg3ENAhCk2zdv7IJwd/QUD4z2RxRwpkcGY8psCVcCYZNq4wYnVWALHM+brtuJjePWiYF/ClmuDr8Ch5+kg==
   dependencies:
     ee-first "1.1.1"
 
@@ -2649,6 +2673,15 @@ promise@^8.3.0:
   dependencies:
     asap "~2.0.6"
 
+prop-types@^15.7.2:
+  version "15.8.1"
+  resolved "http://localhost:4873/prop-types/-/prop-types-15.8.1.tgz#67d87bf1a694f48435cf332c24af10214a3140b5"
+  integrity sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==
+  dependencies:
+    loose-envify "^1.4.0"
+    object-assign "^4.1.1"
+    react-is "^16.13.1"
+
 punycode@^2.1.0:
   version "2.3.1"
   resolved "http://localhost:4873/punycode/-/punycode-2.3.1.tgz#027422e2faec0b25e1549c3e1bd8309b9133b6e5"
@@ -2684,10 +2717,26 @@ react-devtools-core@^6.1.5:
     shell-quote "^1.6.1"
     ws "^7"
 
+react-is@^16.13.1, react-is@^16.7.0:
+  version "16.13.1"
+  resolved "http://localhost:4873/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
+  integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
+
 react-is@^18.0.0:
   version "18.3.1"
   resolved "http://localhost:4873/react-is/-/react-is-18.3.1.tgz#e83557dc12eae63a99e003a46388b1dcbb44db7e"
   integrity sha512-/LLMVyas0ljjAtoYiPqYiL8VWXzUUdThrmU5+n20DZv+a+ClRoevUzw5JxU+Ieh5/c87ytoTBV9G1FiKfNJdmg==
+
+react-native-gesture-handler@~2.14.0:
+  version "2.14.1"
+  resolved "http://localhost:4873/react-native-gesture-handler/-/react-native-gesture-handler-2.14.1.tgz#930640231024b7921435ab476aa501dd4a6b2e01"
+  integrity sha512-YiM1BApV4aKeuwsM6O4C2ufwewYEKk6VMXOt0YqEZFMwABBFWhXLySFZYjBSNRU2USGppJbfHP1q1DfFQpKhdA==
+  dependencies:
+    "@egjs/hammerjs" "^2.0.17"
+    hoist-non-react-statics "^3.3.0"
+    invariant "^2.2.4"
+    lodash "^4.17.21"
+    prop-types "^15.7.2"
 
 react-native-reanimated@~3.6.2:
   version "3.6.3"
@@ -2705,18 +2754,18 @@ react-native-safe-area-context@4.8.2:
   integrity sha512-ffUOv8BJQ6RqO3nLml5gxJ6ab3EestPiyWekxdzO/1MQ7NF8fW1Mzh1C5QE9yq573Xefnc7FuzGXjtesZGv7cQ==
 
 react-native@*:
-  version "0.82.1"
-  resolved "http://localhost:4873/react-native/-/react-native-0.82.1.tgz#8f850bf2d5f04d49246c2d604836218daca19af7"
-  integrity sha512-tFAqcU7Z4g49xf/KnyCEzI4nRTu1Opcx05Ov2helr8ZTg1z7AJR/3sr2rZ+AAVlAs2IXk+B0WOxXGmdD3+4czA==
+  version "0.83.0"
+  resolved "http://localhost:4873/react-native/-/react-native-0.83.0.tgz#30f815ca6355c9fe32daa8772338075d3e2d84f1"
+  integrity sha512-a8wPjGfkktb1+Mjvzkky3d0u6j6zdWAzftZ2LdQtgRgqkMMfgQxD9S+ri3RNlfAFQpuCAOYUIyrNHiVkUQChxA==
   dependencies:
     "@jest/create-cache-key-function" "^29.7.0"
-    "@react-native/assets-registry" "0.82.1"
-    "@react-native/codegen" "0.82.1"
-    "@react-native/community-cli-plugin" "0.82.1"
-    "@react-native/gradle-plugin" "0.82.1"
-    "@react-native/js-polyfills" "0.82.1"
-    "@react-native/normalize-colors" "0.82.1"
-    "@react-native/virtualized-lists" "0.82.1"
+    "@react-native/assets-registry" "0.83.0"
+    "@react-native/codegen" "0.83.0"
+    "@react-native/community-cli-plugin" "0.83.0"
+    "@react-native/gradle-plugin" "0.83.0"
+    "@react-native/js-polyfills" "0.83.0"
+    "@react-native/normalize-colors" "0.83.0"
+    "@react-native/virtualized-lists" "0.83.0"
     abort-controller "^3.0.0"
     anser "^1.4.9"
     ansi-regex "^5.0.0"
@@ -2726,23 +2775,23 @@ react-native@*:
     commander "^12.0.0"
     flow-enums-runtime "^0.0.6"
     glob "^7.1.1"
-    hermes-compiler "0.0.0"
+    hermes-compiler "0.14.0"
     invariant "^2.2.4"
     jest-environment-node "^29.7.0"
     memoize-one "^5.0.0"
-    metro-runtime "^0.83.1"
-    metro-source-map "^0.83.1"
+    metro-runtime "^0.83.3"
+    metro-source-map "^0.83.3"
     nullthrows "^1.1.1"
     pretty-format "^29.7.0"
     promise "^8.3.0"
     react-devtools-core "^6.1.5"
     react-refresh "^0.14.0"
     regenerator-runtime "^0.13.2"
-    scheduler "0.26.0"
+    scheduler "0.27.0"
     semver "^7.1.3"
     stacktrace-parser "^0.1.10"
     whatwg-fetch "^3.0.0"
-    ws "^6.2.3"
+    ws "^7.5.10"
     yargs "^17.6.2"
 
 react-refresh@^0.14.0:
@@ -2815,10 +2864,10 @@ run-parallel@^1.1.9:
   dependencies:
     queue-microtask "^1.2.2"
 
-scheduler@0.26.0:
-  version "0.26.0"
-  resolved "http://localhost:4873/scheduler/-/scheduler-0.26.0.tgz#4ce8a8c2a2095f13ea11bf9a445be50c555d6337"
-  integrity sha512-NlHwttCI/l5gCPR3D1nNXtWABUmBwvZpEQiD4IXSbIDq8BzLIK/7Ir5gTFSGZDUu37K5cMNp0hFtzO38sC7gWA==
+scheduler@0.27.0:
+  version "0.27.0"
+  resolved "http://localhost:4873/scheduler/-/scheduler-0.27.0.tgz#0c4ef82d67d1e5c1e359e8fc76d3a87f045fe5bd"
+  integrity sha512-eNv+WrVbKu1f3vbYJT/xtiF5syA5HPIMtf9IgY/nKg0sWqzAUEvqY/xm7OcZc/qafLx/iO9FgOmeSAp4v5ti/Q==
 
 semver@^6.3.0, semver@^6.3.1:
   version "6.3.1"
@@ -2830,24 +2879,24 @@ semver@^7.1.3, semver@^7.5.4:
   resolved "http://localhost:4873/semver/-/semver-7.7.3.tgz#4b5f4143d007633a8dc671cd0a6ef9147b8bb946"
   integrity sha512-SdsKMrI9TdgjdweUSR9MweHA4EJ8YxHn8DFaDisvhVlUOe4BF1tLD7GAj0lIqWVl+dPb/rExr0Btby5loQm20Q==
 
-send@0.19.0:
-  version "0.19.0"
-  resolved "http://localhost:4873/send/-/send-0.19.0.tgz#bbc5a388c8ea6c048967049dbeac0e4a3f09d7f8"
-  integrity sha512-dW41u5VfLXu8SJh5bwRmyYUbAoSB3c9uQh6L8h/KtsFREPWpbX1lrljJo186Jc4nmci/sGUZ9a0a0J2zgfq2hw==
+send@~0.19.1:
+  version "0.19.2"
+  resolved "http://localhost:4873/send/-/send-0.19.2.tgz#59bc0da1b4ea7ad42736fd642b1c4294e114ff29"
+  integrity sha512-VMbMxbDeehAxpOtWJXlcUS5E8iXh6QmN+BkRX1GARS3wRaXEEgzCcB10gTQazO42tpNIya8xIyNx8fll1OFPrg==
   dependencies:
     debug "2.6.9"
     depd "2.0.0"
     destroy "1.2.0"
-    encodeurl "~1.0.2"
+    encodeurl "~2.0.0"
     escape-html "~1.0.3"
     etag "~1.8.1"
-    fresh "0.5.2"
-    http-errors "2.0.0"
+    fresh "~0.5.2"
+    http-errors "~2.0.1"
     mime "1.6.0"
     ms "2.1.3"
-    on-finished "2.4.1"
+    on-finished "~2.4.1"
     range-parser "~1.2.1"
-    statuses "2.0.1"
+    statuses "~2.0.2"
 
 serialize-error@^2.1.0:
   version "2.1.0"
@@ -2855,16 +2904,16 @@ serialize-error@^2.1.0:
   integrity sha512-ghgmKt5o4Tly5yEG/UJp8qTd0AN7Xalw4XBtDEKP655B699qMEtra1WlXeE6WIvdEG481JvRxULKsInq/iNysw==
 
 serve-static@^1.16.2:
-  version "1.16.2"
-  resolved "http://localhost:4873/serve-static/-/serve-static-1.16.2.tgz#b6a5343da47f6bdd2673848bf45754941e803296"
-  integrity sha512-VqpjJZKadQB/PEbEwvFdO43Ax5dFBZ2UECszz8bQ7pi7wt//PWe1P6MN7eCnjsatYtBT6EuiClbjSWP2WrIoTw==
+  version "1.16.3"
+  resolved "http://localhost:4873/serve-static/-/serve-static-1.16.3.tgz#a97b74d955778583f3862a4f0b841eb4d5d78cf9"
+  integrity sha512-x0RTqQel6g5SY7Lg6ZreMmsOzncHFU7nhnRWkKgWuMTu5NN0DR5oruckMqRvacAN9d5w6ARnRBXl9xhDCgfMeA==
   dependencies:
     encodeurl "~2.0.0"
     escape-html "~1.0.3"
     parseurl "~1.3.3"
-    send "0.19.0"
+    send "~0.19.1"
 
-setprototypeof@1.2.0:
+setprototypeof@~1.2.0:
   version "1.2.0"
   resolved "http://localhost:4873/setprototypeof/-/setprototypeof-1.2.0.tgz#66c9a24a73f9fc28cbe66b09fed3d33dcaf1b424"
   integrity sha512-E5LDX7Wrp85Kil5bhZv46j8jOeboKq5JMmYM3gVGdGH8xFpPWXUMsNrlODCrkoxMEeNi/XZIwuRvY4XNwYMJpw==
@@ -2938,15 +2987,15 @@ stacktrace-parser@^0.1.10:
   dependencies:
     type-fest "^0.7.1"
 
-statuses@2.0.1:
-  version "2.0.1"
-  resolved "http://localhost:4873/statuses/-/statuses-2.0.1.tgz#55cb000ccf1d48728bd23c685a063998cf1a1b63"
-  integrity sha512-RwNA9Z/7PrK06rYLIzFMlaF+l73iwpzsqRIFgbMLbTcLD6cOao82TaWefPXQvB2fOC4AjuYSEndS7N/mTCbkdQ==
-
 statuses@~1.5.0:
   version "1.5.0"
   resolved "http://localhost:4873/statuses/-/statuses-1.5.0.tgz#161c7dac177659fd9811f43771fa99381478628c"
   integrity sha512-OpZ3zP+jT1PI7I8nemJX4AKmAX070ZkYPVWV/AaKTJl+tXCTGyVdC1a4SL8RUQYEwk/f34ZX8UTykN68FwrqAA==
+
+statuses@~2.0.2:
+  version "2.0.2"
+  resolved "http://localhost:4873/statuses/-/statuses-2.0.2.tgz#8f75eecef765b5e1cfcdc080da59409ed424e382"
+  integrity sha512-DvEy55V3DB7uknRo+4iOGT5fP1slR8wQohVdknigZPMpMstaKJQWhwiYBACJE3Ul2pTnATihhBYnRhZQHGBiRw==
 
 string-width@^4.1.0, string-width@^4.2.0, string-width@^4.2.3:
   version "4.2.3"
@@ -3029,7 +3078,7 @@ to-regex-range@^5.0.1:
   dependencies:
     is-number "^7.0.0"
 
-toidentifier@1.0.1:
+toidentifier@~1.0.1:
   version "1.0.1"
   resolved "http://localhost:4873/toidentifier/-/toidentifier-1.0.1.tgz#3be34321a88a820ed1bd80dfaa33e479fbb8dd35"
   integrity sha512-o5sSPKEkg/DIQNmH43V0/uerLrpzVedkUh8tGNvaeXpfpuwjKenlSox/2O/BTlZUtEe+JG7s5YhEz608PlAHRA==
@@ -3089,10 +3138,10 @@ unpipe@~1.0.0:
   resolved "http://localhost:4873/unpipe/-/unpipe-1.0.0.tgz#b2bf4ee8514aae6165b4817829d21b2ef49904ec"
   integrity sha512-pjy2bYhSsufwWlKwPc+l3cN7+wuJlK6uz0YdJEOlQDbl6jo/YlPi4mb8agUkVC8BF7V8NuzeyPNqRksA3hztKQ==
 
-update-browserslist-db@^1.1.4:
-  version "1.1.4"
-  resolved "http://localhost:4873/update-browserslist-db/-/update-browserslist-db-1.1.4.tgz#7802aa2ae91477f255b86e0e46dbc787a206ad4a"
-  integrity sha512-q0SPT4xyU84saUX+tomz1WLkxUbuaJnR1xWt17M7fJtEJigJeWUNGUqrauFXsHnqev9y9JTRGwk13tFBuKby4A==
+update-browserslist-db@^1.2.0:
+  version "1.2.2"
+  resolved "http://localhost:4873/update-browserslist-db/-/update-browserslist-db-1.2.2.tgz#cfb4358afa08b3d5731a2ecd95eebf4ddef8033e"
+  integrity sha512-E85pfNzMQ9jpKkA7+TJAi4TJN+tBCuWh5rUcS/sv6cFi+1q9LYDwDI5dpUL0u/73EElyQ8d3TEaeW4sPedBqYA==
   dependencies:
     escalade "^3.2.0"
     picocolors "^1.1.1"
@@ -3159,13 +3208,6 @@ write-file-atomic@^4.0.2:
   dependencies:
     imurmurhash "^0.1.4"
     signal-exit "^3.0.7"
-
-ws@^6.2.3:
-  version "6.2.3"
-  resolved "http://localhost:4873/ws/-/ws-6.2.3.tgz#ccc96e4add5fd6fedbc491903075c85c5a11d9ee"
-  integrity sha512-jmTjYU0j60B+vHey6TfR3Z7RD61z/hmxBS3VMSGIrroOWXQEneK1zNuotOUrGyBHQj0yrpsLHPWtigEFd13ndA==
-  dependencies:
-    async-limiter "~1.0.0"
 
 ws@^7, ws@^7.5.10:
   version "7.5.10"
